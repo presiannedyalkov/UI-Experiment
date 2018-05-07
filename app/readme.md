@@ -2,7 +2,7 @@
 
 ### 1. Introduction page
 #### Hi there,
-we are testing a new purchasing experiance and we want you to be in! We have created an app that we would like you to check out. You will be presented with a task, which you have to complete, more instructions follow on the next page. After you are finished you will have to fill a quick survey. Please do that, as the results are only submitted after you have completed the survey. We remind you to answer honestly and as accurately as possible, your data is submitted anonymously [more instructions].
+we are testing a new purchasing experience and we want you to be in! We have created an app that we would like you to check out. You will be presented with a task, which you have to complete, more instructions follow on the next page. After you are finished you will have to fill a quick survey. Please do that, as the results are only submitted after you have completed the survey. We remind you to answer honestly and as accurately as possible, your data is submitted anonymously [more instructions].
 
 #### Disclaimer
 For the purpose of the study we track clicks on our website, but your data is anonymously submitted and we don't record your IP address or other ID attributes. We do not set session cookies, so if you don’t complete the study, your results will not be submitted. By continuing you accept those conditions.
