@@ -8,13 +8,15 @@ In this experiment we would focus on the color of the CTA button, and in order t
 
 This experiment is what it says it is - an experiment, and as such aims to have a higher internal and statistical validity, and _not_ to be used as an answer to the question "Which color should I put on my website to drive my conversion rate higher?" If you wish to answer that question, you should make an A/B test. This experiment has much lower external validity compared to an A/B test but should answer the enquiry from the top of the page - do colors generate more clicks.
 
-## Theory
+## Background Theory
 ## Hypothesis
-Theoretisch-Inhaltliche Hypothese: Eine farbige “Kaufen”-Taste verursacht eine erhöhte
-Kaufwahrscheinlichkeit.
+H<sub>1</sub>: Colored > Text link
+H<sub>2</sub>: Colored > Ghost
+H<sub>3</sub>: Ghost > Text link
 
-Empirisch-Inhaltliche Hypothese: Man zeigt 200 Versuchspersonen (VPs) die Bilder von 36
-Produkten mit je 2 Tasten - “Add to list” and “No”. Die “Nein, danke” Taste ist immer farblos und es gibt 6 Varianten von der “Kaufen” Taste: farblos / rot / blau / schwarz / gelb / grün. Die VPs, die den Varianten mit einer gelben, grünen, roten oder blauen “Kaufen”-Taste bekommen haben, werden häufiger die “Kaufen” Taste wählen, als die anderen VPs, die schwarze oder farblose Taste haben.
+Theoretisch-Inhaltliche Hypothese: A colored button will be clicked more often than a non-colored button with the same size, form, text and placement.
+
+Empirisch-Inhaltliche Hypothese: Man zeigt 200 Versuchspersonen (VPs) die Bilder von 36 Produkten mit je 2 Tasten - “Add to list” and “No”. Die “Nein, danke” Taste ist immer farblos und es gibt 6 Varianten von der “Kaufen” Taste: farblos / rot / blau / schwarz / gelb / grün. Die VPs, die den Varianten mit einer gelben, grünen, roten oder blauen “Kaufen”-Taste bekommen haben, werden häufiger die “Kaufen” Taste wählen, als die anderen VPs, die schwarze oder farblose Taste haben.
 
 Statistische Vorhersage: Der Mittelwert von “gekauften” Produkten unter die Bedingung von farbige Buttons ist größer als der Mittelwert von “gekauften” Produkten unter die Bedingung von schwarzen oder farblosen Tasten.
 
@@ -25,8 +27,14 @@ H0: Der Mittelwert von der Anzahl gekauften Produkten unter die Bedingung von sc
 H1: Der Mittelwert von der Anzahl gekauften Produkten unter die Bedingung von farbigen
 Tasten ist größer als den Mittelwert der Anzahl gekauften Produkten unter die Bedingung von schwarze oder farblose Tasten.
 
+### Assumptions (HH)
+
 ## Experimental design
 // not the same as the Experiment section in the app readme
+
+We have divided 36 products into 6 Categories. The products have a brief description, and the user has to decide if they are willing to add it to the cart or not.  We randomize the positions of each product inside each category, the order of the categories, as well as the color of the CTA for each category.The general idea here is to create a balanced array of possibilities. The data of the user's clicks are recorded and sent to a database, where it will be automatically analyzed.
+
+The tiles have an image, a headline and two buttons - "Add to List" and "No". An additional element is shown under each tile every time the user makes a decision to add or not to add the product - it forces the user to answer the question "How possible is it to buy this item?" on a 1-5 Likert scale.
 
 ### Possible confounding variables
 ### External validity and possible threats

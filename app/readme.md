@@ -9,14 +9,8 @@ For the purpose of the study we track clicks on our website, but your data is an
 
 ### 2. Application
 
-#### Cover Story
+#### Instructions
 As you will see, we have build an app to test a new User Experience and we would love it if you could give it a try. We have divided 36 products into 6 Categories. The products have a brief description, and you will have to decide are you willing to add it to your cart or not. [more instructions]
-
-#### Experiment
-We randomize the positions of each product inside each category, the order of the categories, as well as the color of the CTA for each category.The general idea here is to create a balanced array of possibilities.
-The data of the user's clicks are recorded and sent to a database, where it will be automatically analyzed.
-
-The tiles have an image, a headline and two buttons - "Add to List" and "No". An additional element is shown under each tile every time the user makes a decision to add or not to add the product - it forces the user to answer the question "How possible is it to buy this item?" on a 1-5 Likert scale.
 
 ### 3. Survey
 
