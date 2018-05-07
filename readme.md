@@ -11,8 +11,8 @@ This experiment is what it says it is - an experiment, and as such aims to have 
 ## Background Theory
 ## Hypothesis
 H<sub>1</sub>: Colored > Text link
-H<sub>2</sub>: Colored > Ghost
-H<sub>3</sub>: Ghost > Text link
+<br>H<sub>2</sub>: Colored > Ghost
+<br>H<sub>3</sub>: Ghost > Text link
 
 Theoretisch-Inhaltliche Hypothese: A colored button will be clicked more often than a non-colored button with the same size, form, text and placement.
 

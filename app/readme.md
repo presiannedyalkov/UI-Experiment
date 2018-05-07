@@ -22,7 +22,7 @@ As you will see, we have build an app to test a new User Experience and we would
 <br>Entertainment
 <br>Food & Drink
 <br>Hotels & Travel
-2. Extend 'Experiment' section
+2. Extend 'Application' section
 3. Extend 'Survey' section
 4. Add visual material
 5. Write app
