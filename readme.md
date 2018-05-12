@@ -13,6 +13,7 @@ We needed to create a synthetic environment in order to suppress unwanted variab
  - it had to fall in the category of luxury goods as opposed to necessity goods, to alleviate the urgency of the purchase;
  - it had to be of equal interest to both genders and preferably of equal interest to all age groups;
  - it had to be as abstract as possible, but still be recognized as a product and not as a category.
+
 The categories and the products that we have came up with were:
  - Health & Fitness
  - Electronics, Computers & Office
@@ -21,7 +22,7 @@ The categories and the products that we have came up with were:
  - Food & Drink
  - Hotels & Travel
 
- As source for the categories we have used amazon.com and groupon.com.
+ As source for the categories we used amazon.com and groupon.com.
 
 ### Hypothesis
 Theoretical hypothesis: A colored button will be clicked more often than a non-colored button with the same size, form, text and placement.
