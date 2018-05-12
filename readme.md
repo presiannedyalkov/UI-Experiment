@@ -2,9 +2,9 @@
 This project serves as an experiment playground for the research questions "Does differently colored buttons produce different conversion? Is there a difference between colored buttons and simple text links?" Here you will find general information about the project, as well as the theory, the experiment hypothesis, design, analysis, and interpretation of the results. In a different file you will find the documentation about the application itself.
 
 ## Introduction
-User Interfaces (UI) are generally composed of many elements. Each element has its own role for the efficiency of the user experience as well as the conversion rates _(what is conversion?)_ of the web application. Even a small component, such as the call-to-action (CTA) button, requires a lot of attention in order to meet the expected goals. A CTA button is an interactive UI element, which aims to induce people to take an action, such as purchase, contact, subscribe, download etc. The features of an effective CTA button design are size, color, shape, placement, and microcopy.<sup>1</sup>
+User Interfaces (UI) are generally composed of many elements. Each element has its own role for the efficiency of the user experience as well as the conversion rates _(what is conversion?)_ of the web application. Even a small component, such as the call-to-action (CTA) button, requires a lot of attention in order to meet the expected goals. A CTA button is an interactive UI element, which aims to induce people to take an action, such as purchase, contact, subscribe, download etc. The features of an effective CTA button design are size, color, shape, placement, and microcopy.<sup>[1](#1)</sup>
 
-The CTA button relates to the brand color and one of the established practices _(source)_ is to colorize the primary button in the brand color. The primary button represents the primary action that the application user should choose, and it is often accompanied with a secondary or even tertiary action, represented often by secondary and tertiary buttons. These three buttons have a hierarchy of emphasis (https://material.io/design/components/buttons.html#hierarchy-placement) and visual distinction (https://www.lukew.com/ff/entry.asp?571) - the primary button is often filled with color, and the secondary button often has a colored border, but transparent fill or has a gray fill, and the tertiary action can be represented by a text link. Examples of this hierarchy can be seen in the popular UI library Bootstrap (https://getbootstrap.com/docs/4.0/components/buttons/) and is accepted as best practice in the style guide of The Australian Government Design System https://designsystem.gov.au/components/buttons/. Notably Google's Material Design UI does not follow those practices and offers two colored buttons for both the primary and the secondary action (https://material.io/design/color/#color-theme-creation).
+The CTA button relates to the brand color and one of the established practices is to colorize the primary button in the brand color <sup>_citation needed_</sup>. The primary button represents the primary action that the application user should choose, and it is often accompanied with a secondary or even tertiary action, represented often by secondary and tertiary buttons. These three buttons have a hierarchy of emphasis (https://material.io/design/components/buttons.html#hierarchy-placement) and visual distinction (https://www.lukew.com/ff/entry.asp?571) - the primary button is often filled with color, and the secondary button often has a colored border, but transparent fill or has a gray fill, and the tertiary action can be represented by a text link. Examples of this hierarchy can be seen in the popular UI library Bootstrap (https://getbootstrap.com/docs/4.0/components/buttons/) and is accepted as best practice in the style guide of The Australian Government Design System https://designsystem.gov.au/components/buttons/. Notably Google's Material Design UI does not follow those practices and offers two colored buttons for both the primary and the secondary action (https://material.io/design/color/#color-theme-creation).
 
 _(picture)_
 
@@ -32,7 +32,7 @@ List all assumptions about the experiment and try to clear them. E.g. it was an 
 ## Experimental design
 To test our hypotheses, we needed to create a synthetic environment in order to suppress unwanted variables that correlate with the independent variable (the CTA color) - the one we control, or the independent variable - the variable being measured. We thought about creating a small web shop with one page of items, where each tester has to test only one color, but we then decided to present every tester with all the conditions for the independent variable. _(WHY?)_. We thought about giving an initial number of tokens (money or credits), which the tester has to spent, but we discarded that idea, as we thought that money is a bigger factor than the CTA color when purchasing an item and the effect of the price of the item will eclipse the actual effect of the CTA color. The idea then shifted from creating a web shop to creating a wish list web application, where the tester has to add items they wish to buy in a cart, very much like in a web shop, but without the obligation to "buy" the item. To prevent the tester from adding everything in the cart we have instructed them to (...). To minimize the personal preferences of the tester as much as possible we have created 6 different categories, each of the categories containing a set of 6 abstract products. Each product had to conform to the following requirements:
  - it had to fall in the category of luxury goods as opposed to necessity goods, to alleviate the urgency of the purchase;
- - it had to be of equal interest to both genders and preferably of equal interest to all age groups;
+ - it had to be of equal interest to all genders and preferably of equal interest to all age groups;
  - it had to be as abstract as possible, but still be recognized as a product and not as a category.
 
 The categories and the products that we have came up with were:
@@ -74,11 +74,11 @@ influence answers.
 
 ## Interpretation
 
-### TO DO:
+### @TODO:
 1. Extend 'Theory' section (09.05)
 2. Extend 'Hypothesis' section (09.05)
 3. Extend 'Experimental design' section (07.05)
 4. Add visual material
 
 ### References:
-1. _UX Practices: 8 Handy Tips on CTA Button Design_ https://uxplanet.org/ux-practices-8-handy-tips-on-cta-button-design-682fdb9c65bc
+<a id="1"></a>1. _UX Practices: 8 Handy Tips on CTA Button Design_ https://uxplanet.org/ux-practices-8-handy-tips-on-cta-button-design-682fdb9c65bc
