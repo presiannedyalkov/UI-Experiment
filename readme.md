@@ -4,7 +4,7 @@ This project serves as an experiment playground for the research questions "Does
 ## Introduction
 User Interfaces (UI) are generally composed of many elements. Each element has its own role for the efficiency of the user experience as well as the conversion rates _(what is conversion?)_ of the web application. Even a small component, such as the call-to-action (CTA) button, requires a lot of attention in order to meet the expected goals. A CTA button is an interactive UI element, which aims to induce people to take an action, such as purchase, contact, subscribe, download etc. The features of an effective CTA button design are size, color, shape, placement, and microcopy.<sup>1</sup>
 
-The CTA button relates to the brand color and one of the established practices _(source)_ is to colorize the primary button in the brand color. The primary button represents the primary action that the application user should choose, and it is often accompanied with a secondary or even tertiary action, represented often by secondary and tertiary buttons. These three buttons have a hierarchy of emphasis (https://material.io/design/components/buttons.html#hierarchy-placement) - the primary button is often filled with color, and the secondary button often has a colored border, but transparent fill or has a gray feeling, and the tertiary button can be represented by a text link. Examples of this hierarchy can be seen in the popular UI library Bootstrap (https://getbootstrap.com/docs/4.0/components/buttons/) and is accepted as best practice in the style guide of The Australian Government Design System https://designsystem.gov.au/components/buttons/.
+The CTA button relates to the brand color and one of the established practices _(source)_ is to colorize the primary button in the brand color. The primary button represents the primary action that the application user should choose, and it is often accompanied with a secondary or even tertiary action, represented often by secondary and tertiary buttons. These three buttons have a hierarchy of emphasis (https://material.io/design/components/buttons.html#hierarchy-placement) and visual distinction (https://www.lukew.com/ff/entry.asp?571) - the primary button is often filled with color, and the secondary button often has a colored border, but transparent fill or has a gray fill, and the tertiary action can be represented by a text link. Examples of this hierarchy can be seen in the popular UI library Bootstrap (https://getbootstrap.com/docs/4.0/components/buttons/) and is accepted as best practice in the style guide of The Australian Government Design System https://designsystem.gov.au/components/buttons/. Notably Google's Material Design UI does not follow those practices and offers two colored buttons for both the primary and the secondary action (https://material.io/design/color/#color-theme-creation).
 
 _(picture)_
 
@@ -49,7 +49,7 @@ The product tiles have an image, a headline and two buttons - "Add" and "Skip". 
 
 ### Possible confounding variables
 - Instrumentation:
-- Experimental Mortality:
+- Experimental Mortality: We cannot prevent testers to exit the experiment, but we do not count the data that is not submitted.
 - Selection:
 ### External validity and possible threats
 - Units:
