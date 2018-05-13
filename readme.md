@@ -2,7 +2,7 @@
 This project serves as an experiment playground for the research questions "Does differently colored buttons produce different conversion? Is there a difference between colored buttons and simple text links?" Here you will find general information about the project, as well as the theory, the experiment hypothesis, design, analysis, and interpretation of the results. In a different file you will find the documentation about the application itself.
 
 ## Introduction
-User Interfaces (UI) are generally composed of many elements. Each element has its own role for the efficiency of the user experience as well as the conversion rates _(what is conversion?)_ of the web application. Even a small component, such as the call-to-action (CTA) button, requires a lot of attention in order to meet the expected goals. A CTA button is an interactive UI element, which aims to induce people to take an action, such as purchase, contact, subscribe, download etc.<sup>_citation needed_</sup>
+A software application's User Interface (UI) is generally composed of many elements. Each element has its own role for the efficiency of the user experience as well as the conversion rates _(what is conversion?)_ of the application. Even a small component, such as the call-to-action (CTA) button, requires a lot of attention in order to meet the expected goals. A CTA button is an interactive UI element, which aims to induce people to take an action, such as to purchase, contact, subscribe, download or other such activity that will induce conversion.<sup>_citation needed_</sup> Thus the CTA button and the conversion rate are in a direct correlation, but in a typical software application both are contingent on the main color in the designer palette, which is normally dictated by the brand color of the application owner.
 
 
 The features of an effective CTA button design are size, color, shape, placement, and microcopy.<sup>[1](#references)</sup>
@@ -52,7 +52,7 @@ The product tiles have an image, a headline and two buttons - "Add" and "Skip". 
 
 ### Possible confounding variables
 - Instrumentation:
-- Experimental Mortality: We cannot prevent testers to exit the experiment, but we do not count the data that is not submitted.
+- Experimental Mortality: We cannot prevent testers from exiting the experiment, but the data is only submitted at the end of the third step.
 - Selection:
 ### External validity and possible threats
 - Units:
@@ -74,8 +74,9 @@ influence answers.
 - Deception - Deceiving about the purpose of the study.
 
 ## Analysis
-
+This will be filled after the experiment has finished and the results are evaluated.
 ## Interpretation
+This will be filled after the experiment has finished and the results are evaluated.
 
 ### @TODO:
 1. Extend 'Theory' section (09.05)
