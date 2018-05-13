@@ -2,11 +2,14 @@
 This project serves as an experiment playground for the research questions "Does differently colored buttons produce different conversion? Is there a difference between colored buttons and simple text links?" Here you will find general information about the project, as well as the theory, the experiment hypothesis, design, analysis, and interpretation of the results. In a different file you will find the documentation about the application itself.
 
 ## Introduction
-User Interfaces (UI) are generally composed of many elements. Each element has its own role for the efficiency of the user experience as well as the conversion rates _(what is conversion?)_ of the web application. Even a small component, such as the call-to-action (CTA) button, requires a lot of attention in order to meet the expected goals. A CTA button is an interactive UI element, which aims to induce people to take an action, such as purchase, contact, subscribe, download etc. The features of an effective CTA button design are size, color, shape, placement, and microcopy.<sup>[1](#1)</sup>
+User Interfaces (UI) are generally composed of many elements. Each element has its own role for the efficiency of the user experience as well as the conversion rates _(what is conversion?)_ of the web application. Even a small component, such as the call-to-action (CTA) button, requires a lot of attention in order to meet the expected goals. A CTA button is an interactive UI element, which aims to induce people to take an action, such as purchase, contact, subscribe, download etc.<sup>_citation needed_</sup>
 
-The CTA button relates to the brand color and one of the established practices is to colorize the primary button in the brand color <sup>_citation needed_</sup>. The primary button represents the primary action that the application user should choose, and it is often accompanied with a secondary or even tertiary action, represented often by secondary and tertiary buttons. These three buttons have a hierarchy of emphasis (https://material.io/design/components/buttons.html#hierarchy-placement) and visual distinction (https://www.lukew.com/ff/entry.asp?571) - the primary button is often filled with color, and the secondary button often has a colored border, but transparent fill or has a gray fill, and the tertiary action can be represented by a text link. Examples of this hierarchy can be seen in the popular UI library Bootstrap (https://getbootstrap.com/docs/4.0/components/buttons/) and is accepted as best practice in the style guide of The Australian Government Design System https://designsystem.gov.au/components/buttons/. Notably Google's Material Design UI does not follow those practices and offers two colored buttons for both the primary and the secondary action (https://material.io/design/color/#color-theme-creation).
 
-_(picture)_
+The features of an effective CTA button design are size, color, shape, placement, and microcopy.<sup>[1](#references)</sup>
+
+The CTA button relates to the brand color and one of the established practices is to colorize the primary button in the brand color <sup>_citation needed_</sup>. The primary button represents the primary action that the application user should choose, and it is often accompanied with a secondary or even tertiary action, represented often by secondary and tertiary buttons. These three buttons have a hierarchy of emphasis<sup>[2](#references)</sup> and visual distinction<sup>[3](#references)</sup> - the primary button is often filled with color, and the secondary button often has a colored border, but transparent fill or has a gray fill, and the tertiary action can be represented by a text link. Examples of this hierarchy can be seen in the popular UI library Bootstrap<sup>[4](#references)</sup> and is accepted as best practice in the style guide of The Australian Government Design System<sup>[5](#references)</sup>. Notably Google's Material Design UI does not follow those practices and offers two colored buttons for both the primary and the secondary action<sup>[6](#references)</sup>.
+
+_(insert picture)_
 
 In this experiment we want to test if the hierarchy of emphasis is properly translated through the button colorization, and we would also focus on the color of the CTA button. In order to do so, we will vary only the color of the button in the different conditions to be measured, and keep all other aspects such as the size, the text, the shape and the placement constant.
 
@@ -80,5 +83,15 @@ influence answers.
 3. Extend 'Experimental design' section (07.05)
 4. Add visual material
 
-### References:
-<a id="1"></a>1. _UX Practices: 8 Handy Tips on CTA Button Design_ https://uxplanet.org/ux-practices-8-handy-tips-on-cta-button-design-682fdb9c65bc
+### <a id="references"></a>References:
+1. _UX Practices: 8 Handy Tips on CTA Button Design_ https://uxplanet.org/ux-practices-8-handy-tips-on-cta-button-design-682fdb9c65bc
+2. _Material Design: Hierarchy and placement_
+https://material.io/design/components/buttons.html#hierarchy-placement
+3. _Primary & Secondary Actions in Web Forms_
+https://www.lukew.com/ff/entry.asp?571
+4. _Bootstrap Components: Buttons_
+https://getbootstrap.com/docs/4.0/components/buttons/
+5. _Australian Government Design System: Buttons_
+https://designsystem.gov.au/components/buttons/
+6. _Material Design: Color theme creation_
+https://material.io/design/color/#color-theme-creation
