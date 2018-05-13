@@ -2,19 +2,18 @@
 This project serves as an experiment playground for the research questions "Does differently colored buttons produce different conversion? Is there a difference between colored buttons and simple text links?" Here you will find general information about the project, as well as the theory, the experiment hypothesis, design, analysis, and interpretation of the results. In a different file you will find the documentation about the application itself.
 
 ## Introduction
-A software application's User Interface (UI) is generally composed of many elements. Each element has its own role for the efficiency of the user experience as well as the conversion rates _(what is conversion?)_ of the application. Even a small component, such as the call-to-action (CTA) button, requires a lot of attention in order to meet the expected goals. A CTA button is an interactive UI element, which aims to induce people to take an action, such as to purchase, contact, subscribe, download or other such activity that will induce conversion.<sup>_citation needed_</sup> Thus the CTA button and the conversion rate are in a direct correlation, but in a typical software application both are contingent on the main color in the designer palette, which is normally dictated by the brand color of the application owner.
+A software application's User Interface (UI) is generally composed of many elements. Each element has its own role for the efficiency of the user experience as well as the conversion rates _(what is conversion?)_ of the application. Even a small component, such as the call-to-action (CTA) button, requires a lot of attention in order to meet the expected goals. A CTA button is an interactive UI element, which aims to induce people to take an action, such as to purchase, contact, subscribe, download or other such activity that will induce conversion <sup>_[citation needed]_</sup>. Thus the CTA button is an expression of the primary action that leads the user to the main objective of the application. The CTA button's color attribute and the conversion rate are in a direct relation, but in a typical software application both are contingent on the main color in the designer palette, which is normally dictated by the brand color of the application owner <sup>_[citation needed]_</sup>, as illustrated on the dependency diagram below. The CTA button often relates to the brand color and one of the established practices is to colorize the primary button in the brand color <sup>_[examples needed (Amazon)]_</sup>.
 
+![Color dependencies](https://raw.githubusercontent.com/presiannedyalkov/Wishlist-App/development/Diagram_color_dependecies.png "Color dependencies")
 
-The features of an effective CTA button design are size, color, shape, placement, and microcopy.<sup>[1](#references)</sup>
+An application often needs more than one CTA button and can utilize differently styled CTA buttons to offer different actions for the user to take <sup>_[insert image]_</sup>. This practice in UI design is based on the isolation paradigm, which dictates that elements that stand out are remembered more and it is an integral part of user flow<sup>_[citation needed]_</sup>. The primary button represents the primary action that the application user should choose, and it is often accompanied with a secondary or even tertiary action, represented often by secondary and tertiary buttons. These three buttons have a hierarchy of emphasis<sup>[2](#references)</sup> and visual distinction<sup>[3](#references)</sup> - the primary button is often filled with color, and the secondary button often has a colored border, but transparent fill or has a gray fill, and the tertiary action can be represented by a text link. Examples of this hierarchy can be seen in the popular UI library Bootstrap<sup>[4](#references)</sup> and is accepted as best practice in the style guide of The Australian Government Design System<sup>[5](#references)</sup>. Notably Google's Material Design UI does not follow those practices and offers two colored buttons for both the primary and the secondary action<sup>[6](#references)</sup>.
 
-The CTA button relates to the brand color and one of the established practices is to colorize the primary button in the brand color <sup>_citation needed_</sup>. The primary button represents the primary action that the application user should choose, and it is often accompanied with a secondary or even tertiary action, represented often by secondary and tertiary buttons. These three buttons have a hierarchy of emphasis<sup>[2](#references)</sup> and visual distinction<sup>[3](#references)</sup> - the primary button is often filled with color, and the secondary button often has a colored border, but transparent fill or has a gray fill, and the tertiary action can be represented by a text link. Examples of this hierarchy can be seen in the popular UI library Bootstrap<sup>[4](#references)</sup> and is accepted as best practice in the style guide of The Australian Government Design System<sup>[5](#references)</sup>. Notably Google's Material Design UI does not follow those practices and offers two colored buttons for both the primary and the secondary action<sup>[6](#references)</sup>.
-
-_(insert picture)_
+![Button_hierarchy](https://raw.githubusercontent.com/presiannedyalkov/Wishlist-App/development/Button_hierarchy.png "Button_hierarchy")
 
 In this experiment we want to test if the hierarchy of emphasis is properly translated through the button colorization, and we would also focus on the color of the CTA button. In order to do so, we will vary only the color of the button in the different conditions to be measured, and keep all other aspects such as the size, the text, the shape and the placement constant.
 
 ## Theory
-
+The features of an effective design of a CTA button include attributes such as the size, the color, the shape, the placement, and the microcopy, when such is used.<sup>[1](#references)</sup>
 
 ### Hypothesis
 Theoretical hypothesis: A colored button will be clicked more often than a non-colored button with the same size, form, text and placement.
@@ -54,6 +53,8 @@ The product tiles have an image, a headline and two buttons - "Add" and "Skip". 
 - Instrumentation:
 - Experimental Mortality: We cannot prevent testers from exiting the experiment, but the data is only submitted at the end of the third step.
 - Selection:
+- The task is a bigger motivator than the CTA color.
+- Learning effect: the problem with making the buttons text links is that the user does not easily recognize which element is text and which is link, but in our experiment when the tester sees the colored button
 ### External validity and possible threats
 - Units:
 - Outcome:
