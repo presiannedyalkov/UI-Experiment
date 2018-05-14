@@ -10,7 +10,7 @@ An application often needs more than one CTA button and can utilize differently 
 
 ![Button_hierarchy](https://raw.githubusercontent.com/presiannedyalkov/Wishlist-App/development/Button_hierarchy.png "Button_hierarchy")
 
-Google's Material Design UI style guide also distinguishes four types of buttons - Text button for low emphasis, which is typically used for less important actions, Outlined Button  for medium emphasis, which is used for more emphasis than text buttons due to the stroke and Contained button for high emphasis, which have more emphasis, as they use a color fill and shadow. The fourth type is a Toggle button, which is of no interest for this case<sup>[6](#references)</sup>. And going through a list of 219 style guide examples on styleguide.io makes the impression that there is no universally accepted design pattern to follow in order to translate the hierarchy of goals, that the application owner is trying to achieve.
+Google's Material Design UI style guide also distinguishes four types of buttons - Text button for low emphasis, which is typically used for less important actions, Outlined Button  for medium emphasis, which is used for more emphasis than text buttons due to the stroke and Contained button for high emphasis, which have more emphasis, as they use a color fill and shadow. The fourth type is a Toggle button, which is of no interest for this case<sup>[6](#references)</sup>. Going through a list of 219 style guide examples on styleguide.io makes the impression that there is no universally accepted design pattern to follow in order to translate the hierarchy of goals, that the application owner is trying to achieve.
 
 In this experiment we want to test if the hierarchy of emphasis is properly translated in the type of color hierarchy used by The Australian Government Design System, and thus would focus solely on the color of the CTA button. In our experiment we will vary only the color of the button in the different conditions to be measured, and keep all other aspects such as the size, the text, the shape and the placement constant.
 
@@ -56,7 +56,7 @@ The product tiles have an image, a headline and two buttons - "Add" and "Skip". 
 - Experimental Mortality: We cannot prevent testers from exiting the experiment, but the data is only submitted at the end of the third step.
 - Selection:
 - The task is a bigger motivator than the CTA color.
-- Learning effect: the problem with making the buttons text links is that the user does not easily recognize which element is text and which is link, but in our experiment when the tester sees the colored button
+- Learning effect: the problem with making the buttons text links is that the user does not easily recognize which element is text and which is link, but in our experiment after the tester has completed the first category, they will expect the button to be placed under the title, thus focusing immediately on the area, even in the conditions of an outlined button or text link. 
 ### External validity and possible threats
 - Units:
 - Outcome:
