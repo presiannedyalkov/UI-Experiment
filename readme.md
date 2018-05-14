@@ -2,7 +2,7 @@
 This project serves as an experiment playground for the research questions "Does differently colored buttons produce different conversion? Is there a difference between colored buttons and simple text links?" Here you will find general information about the project, as well as the theory, the experiment hypothesis, design, analysis, and interpretation of the results. In a different file you will find the documentation about the application's concept and general logic.
 
 ## Introduction
-A software application's User Interface (UI) is generally composed of many elements. Each element has its own role for the efficiency of the user experience as well as the conversion rates _(what is conversion?)_ of the application. Even a small component, such as the call-to-action (CTA) button, requires a lot of attention in order to meet the expected goals. A CTA button is an interactive UI element, which aims to induce people to take an action, such as to purchase, contact, subscribe, download or other such activity that will induce conversion <sup>_[citation needed]_</sup>. Thus the CTA button is an expression of the primary action that leads the user to the main objective of the application. The CTA button's color attribute and the conversion rate are in a direct relation, but in a typical software application both are contingent on the main color in the designer palette, which is normally dictated by the brand color of the application owner <sup>_[citation needed]_</sup>, as illustrated on the dependency diagram below. The CTA button often relates to the brand color and one of the established practices is to colorize the primary button in the brand color <sup>_[examples needed (Amazon)]_</sup>.
+A software application's User Interface (UI) is generally composed of many elements. Each element has its own role for the efficiency of the user experience as well as the conversion rates _(what is conversion?)_ of the application. Even a small component, such as the call-to-action (CTA) button, requires a lot of attention in order to meet the expected goals. A CTA button is an interactive UI element, which aims to induce people to take an action, such as to purchase, contact, subscribe, download or other such activity that will induce conversion <sup>_[citation needed]_</sup>. Thus the CTA button is an expression of the primary action that leads the user to the main objective of the application. The features of an effective design of a CTA button include attributes such as the size, the color, the shape, the placement, and the microcopy, when such is used.<sup>[1](#references)</sup> The CTA button's color attribute and the conversion rate are in a direct relation, but in a typical software application both are contingent on the main color in the designer palette, which is normally dictated by the brand color of the application owner <sup>_[citation needed]_</sup>, as illustrated on the dependency diagram below. The CTA button often relates to the brand color and one of the established practices is to colorize the primary button in the brand color <sup>_[examples needed (Amazon)]_</sup>.
 
 ![Color dependencies](https://raw.githubusercontent.com/presiannedyalkov/Wishlist-App/development/Diagram_color_dependecies.png "Color dependencies")
 
@@ -15,7 +15,13 @@ Google's Material Design UI style guide also distinguishes four types of buttons
 In this experiment we want to test if the hierarchy of emphasis is properly translated in the type of color hierarchy used by The Australian Government Design System, and thus would focus solely on the color of the CTA button. In our experiment we will vary only the color of the button in the different conditions to be measured, and keep all other aspects such as the size, the text, the shape and the placement constant.
 
 ## Theory
-The features of an effective design of a CTA button include attributes such as the size, the color, the shape, the placement, and the microcopy, when such is used.<sup>[1](#references)</sup>
+
+
+A study of Attention-Getting Effects of Color by Dooley and Harkins from 1970 shows that color increased the attention of the tested subjects.<sup>[8](#references)</sup>
+
+A study about go/no-go task by Bokura, Yamaguchi and Kobayashi from 2001 found no difference with respect to the go and no-go conditions, leading to the conclusion that the stimuli presented to the subjects are noticed, even if they decide to ignore them.<sup>[9](#references)</sup> Transferring the finding to the field, this would mean that an Amazon buyer notices all items in a category list and they choose which ones will receive more attention and which ones would be ignored.
+
+A study by Reis et. al. published in 2006 found that color object information contributes to object recognition.<sup>[10](#references)</sup>
 
 ### Hypothesis
 Theoretical hypothesis: A colored button will be clicked more often than a non-colored button with the same size, form, text and placement.
@@ -56,7 +62,7 @@ The product tiles have an image, a headline and two buttons - "Add" and "Skip". 
 - Experimental Mortality: We cannot prevent testers from exiting the experiment, but the data is only submitted at the end of the third step.
 - Selection:
 - The task is a bigger motivator than the CTA color.
-- Learning effect: the problem with making the buttons text links is that the user does not easily recognize which element is text and which is link, but in our experiment after the tester has completed the first category, they will expect the button to be placed under the title, thus focusing immediately on the area, even in the conditions of an outlined button or text link. 
+- Learning effect: the problem with making the buttons text links is that the user does not easily recognize which element is text and which is link, but in our experiment after the tester has completed the first category, they will expect the button to be placed under the title, thus focusing immediately on the area, even in the conditions of an outlined button or text link.
 ### External validity and possible threats
 - Units:
 - Outcome:
@@ -101,3 +107,6 @@ https://designsystem.gov.au/components/buttons/
 https://material.io/design/components/buttons.html#usage
 7. _Material Design: Color theme creation_
 https://material.io/design/color/#color-theme-creation
+8. Roger P. Dooley, Larry E. Harkins, _Functional and Attention-Getting Effects of Color on Graphic Communications_, 1970
+9. Bokura H., Yamaguchi S., Kobayashi S., _Electrophysiological correlates for response inhibition in a Go/NoGo task_, 2001
+10. Reis A., Faísca L., Ingvar M., Petersson KM., _Color makes a difference: two-dimensional object naming in literate and illiterate subjects_, 2006
