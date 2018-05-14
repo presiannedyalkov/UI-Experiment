@@ -15,10 +15,9 @@ Google's Material Design UI style guide also distinguishes four types of buttons
 In this experiment we want to test if the hierarchy of emphasis is properly translated in the type of color hierarchy used by The Australian Government Design System, and thus would focus solely on the color of the CTA button. In our experiment we will vary only the color of the button in the different conditions to be measured, and keep all other aspects such as the size, the text, the shape and the placement constant.
 
 ## Theory
-
-
 A study of Attention-Getting Effects of Color by Dooley and Harkins from 1970 shows that color increased the attention of the tested subjects.<sup>[8](#references)</sup>
 
+The purchasing of a product is made voluntarily, with the idea that one can choose to buy or not to buy a product.
 A study about go/no-go task by Bokura, Yamaguchi and Kobayashi from 2001 found no difference with respect to the go and no-go conditions, leading to the conclusion that the stimuli presented to the subjects are noticed, even if they decide to ignore them.<sup>[9](#references)</sup> Transferring the finding to the field, this would mean that an Amazon buyer notices all items in a category list and they choose which ones will receive more attention and which ones would be ignored.
 
 A study by Reis et. al. published in 2006 found that color object information contributes to object recognition.<sup>[10](#references)</sup>
@@ -55,7 +54,7 @@ The categories and the products that we have came up with were:
 
  As source for the categories we used amazon.com and groupon.com.
 
-The product tiles have an image, a headline and two buttons - "Add" and "Skip". An additional element is shown under each tile every time the user makes a decision to add or not to add the product - it forces the user to answer the question "Will you buy in the next 18 months?" on a 1-6 Likert scale.
+ In order to minimize the ceiling effect we have added a rating for each product on a 1-6 Likert scale with the question "Would you buy this in the next 18 months?". This gives us interval scaled data.
 
 ### Possible confounding variables
 - Instrumentation:
