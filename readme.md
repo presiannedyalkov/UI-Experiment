@@ -87,10 +87,14 @@ This will be filled after the experiment has finished and the results are evalua
 This will be filled after the experiment has finished and the results are evaluated.
 
 ### @TODO:
-1. Extend 'Theory' section (09.05)
-2. Extend 'Hypothesis' section (09.05)
-3. Extend 'Experimental design' section (07.05)
-4. Add visual material
+1. Incorporate Anna's suggestions
+2. Include newly added theory and experimental design elements
+3. Read and review the whole text
+4. Edit/remove dependency diagram
+5. Delete redundant information
+6. Add more visual material
+7. Handle references
+8. Add a list with ca. 80 Titles from Groupon
 
 ### <a id="references"></a>References:
 1. _UX Practices: 8 Handy Tips on CTA Button Design_ https://uxplanet.org/ux-practices-8-handy-tips-on-cta-button-design-682fdb9c65bc
