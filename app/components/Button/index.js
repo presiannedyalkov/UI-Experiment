@@ -6,6 +6,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+// import styles from './Button.css' // usage ${styles.button}
 
 // import styled from 'styled-components';
 
@@ -19,7 +20,7 @@ class Button extends React.Component { // eslint-disable-line react/prefer-state
     // <button class="btn">{children}</button>
     return (
       <div>
-        <button className={`btn btn-block btn-${type}  btn-${color} mb-2`}>{children}</button>
+        <button className={`btn btn-block btn-${type} btn-${color} mb-2`}>{children}</button>
       </div>
     );
   }

@@ -5,17 +5,22 @@
 */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from 'components/Button';
-// import styled from 'styled-components';
 
-function ButtonGroup() {
+function ButtonGroup(props) { // eslint-disable-line react/prefer-stateless-function
+  const hierarchy = props.hierarchy[0];
   return (
     <div>
-      <Button type="primary" color="blue">Add to cart</Button>
-      <Button type="outline-primary" color="blue">Add to list</Button>
-      <Button type="link" color="blue">Skip</Button>
+      <Button type={hierarchy.primaryAction} color="blue">Add to cart</Button>
+      <Button type={hierarchy.secondaryAction} color="blue">Add to list</Button>
+      <Button type={hierarchy.tertiaryAction} color="blue">Skip</Button>
     </div>
   );
 }
+
+ButtonGroup.propTypes = {
+  hierarchy: PropTypes.array,
+};
 
 export default ButtonGroup;
