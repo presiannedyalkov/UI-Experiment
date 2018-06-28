@@ -1,22 +1,25 @@
 /**
 *
-* Card
+* Card Component
 *
 */
 
 // Imports
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, CardTitle, CardText, Col } from 'reactstrap';
+import { Card, CardTitle, Col } from 'reactstrap';
 import ButtonGroup from 'components/ButtonGroup';
+
+import styles from './Card.css';
 
 function SimpleCard(props) {
   return (
-    <Col sm="4" className="mb-4">
-      <Card body className="text-center">
-        <CardTitle className="mb-5">{props.text}</CardTitle>
-        <CardText>Item id: {props.id}</CardText>
-        <ButtonGroup hierarchy={props.hierarchy} page={props.page} />
+    <Col sm="6" md="4" className={`mb-4 ${styles.col}`}>
+      <Card body className="text-center" dataId={props.id}>
+        <div className={styles.titleContainer}>
+          <CardTitle className={styles.cardTitle}>{props.text}</CardTitle>
+        </div>
+        <ButtonGroup buttonColor={props.buttonColor} hierarchy={props.hierarchy} page={props.page} />
       </Card>
     </Col>
   );
@@ -26,6 +29,7 @@ SimpleCard.propTypes = {
   text: PropTypes.string,
   id: PropTypes.number,
   hierarchy: PropTypes.array,
+  buttonColor: PropTypes.string,
   page: PropTypes.number,
 };
 

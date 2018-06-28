@@ -1,3 +1,123 @@
-:local(.button) {
-  background-color: orange;
+.btn-outline-primary:hover {
+  background-color: transparent;
+}
+
+/* RED */
+.btn-red.btn-primary {
+  background-color: #ff4444;
+  border-color: #ff4444;
+}
+.btn-red.btn-primary:hover {
+  background-color: #CC0000;
+  border-color: #CC0000;
+}
+.btn-red.btn-outline-primary {
+  border-color: #ff4444;
+  color: #ff4444;
+}
+.btn-red.btn-outline-primary:hover {
+  border-color: #CC0000;
+  color: #CC0000;
+}
+.btn-red.btn-link {
+  color: #ff4444;
+}
+.btn-red.btn-link:hover {
+  color: #CC0000;
+}
+
+/* GREEN */
+.btn-green.btn-primary {
+  background-color: #00C851;
+  border-color: #00C851;
+}
+.btn-green.btn-primary:hover {
+  background-color: #007E33;
+  border-color: #007E33;
+}
+.btn-green.btn-outline-primary {
+  border-color: #00C851;
+  color: #00C851;
+}
+.btn-green.btn-outline-primary:hover {
+  border-color: #007E33;
+  color: #007E33;
+}
+.btn-green.btn-link {
+  color: #00C851;
+}
+.btn-green.btn-link:hover {
+  color: #007E33;
+}
+
+/* BLUE */
+.btn-blue.btn-primary {
+  background-color: #4285F4;
+  border-color: #4285F4;
+}
+.btn-blue.btn-primary:hover {
+  background-color: #0d47a1;
+  border-color: #0d47a1;
+}
+.btn-blue.btn-outline-primary {
+  border-color: #4285F4;
+  color: #4285F4;
+}
+.btn-blue.btn-outline-primary:hover {
+  border-color: #0d47a1;
+  color: #0d47a1;
+}
+.btn-blue.btn-link {
+  color: #4285F4;
+}
+.btn-blue.btn-link:hover {
+  color: #0d47a1;
+}
+
+/* ORANGE */
+.btn-orange.btn-primary {
+  background-color: #ffbb33;
+  border-color: #ffbb33;
+}
+.btn-orange.btn-primary:hover {
+  background-color: #FF8800;
+  border-color: #FF8800;
+}
+.btn-orange.btn-outline-primary {
+  border-color: #ffbb33;
+  color: #ffbb33;
+}
+.btn-orange.btn-outline-primary:hover {
+  border-color: #FF8800;
+  color: #FF8800;
+}
+.btn-orange.btn-link {
+  color: #ffbb33;
+}
+.btn-orange.btn-link:hover {
+  color: #FF8800;
+}
+
+/* BLACK */
+.btn-black.btn-primary {
+  background-color: #2E2E2E;
+  border-color: #2E2E2E;
+}
+.btn-black.btn-primary:hover {
+  background-color: #212121;
+  border-color: #212121;
+}
+.btn-black.btn-outline-primary {
+  border-color: #2E2E2E;
+  color: #2E2E2E;
+}
+.btn-black.btn-outline-primary:hover {
+  border-color: #212121;
+  color: #212121;
+}
+.btn-black.btn-link {
+  color: #2E2E2E;
+}
+.btn-black.btn-link:hover {
+  color: #212121;
 }

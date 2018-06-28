@@ -1,23 +1,17 @@
 /**
 *
-* Button
+* Button Component
 *
 */
 
 import React from 'react';
 import PropTypes from 'prop-types';
-// import styles from './Button.css' // usage ${styles.button}
-
-// import styled from 'styled-components';
-
-// import { FormattedMessage } from 'react-intl';
-// import messages from './messages';
+import './Button.css'; // usage ${styles.button}
 
 class Button extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     const { children, color, type } = this.props;
-    // Return an element describing a
-    // <button class="btn">{children}</button>
+
     return (
       <div>
         <button className={`btn btn-block btn-${type} btn-${color} mb-2`}>{children}</button>

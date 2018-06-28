@@ -8,7 +8,7 @@ const items = [
   {
     id: 1,
     category: 'Health and Fitness',
-    content: 'Meditation and/or Yoga Classes',
+    content: 'Meditation and Yoga Classes',
   },
   {
     id: 2,
@@ -28,12 +28,12 @@ const items = [
   {
     id: 5,
     category: 'Health and Fitness',
-    content: 'Protein bars and/or -shakes',
+    content: 'Protein bars and -shakes',
   },
   {
     id: 6,
     category: 'Health and Fitness',
-    content: 'Air Purifiers and/or Humidifiers',
+    content: 'Air Purifiers and Humidifiers',
   },
   {
     id: 7,
@@ -68,7 +68,7 @@ const items = [
   {
     id: 13,
     category: 'Hotels and Travel',
-    content: 'Outdoor and/or Adventure Vacations',
+    content: 'Outdoor and Adventure Vacations',
   },
   {
     id: 14,
@@ -93,27 +93,27 @@ const items = [
   {
     id: 18,
     category: 'Hotels and Travel',
-    content: 'Skiing and/or Snowboarding Vacations',
+    content: 'Skiing and Snowboarding Vacations',
   },
   {
     id: 19,
     category: 'Leisure Activities',
-    content: 'Tickets to Concerts and/or Conferences',
+    content: 'Tickets to Concerts and Conferences',
   },
   {
     id: 20,
     category: 'Leisure Activities',
-    content: 'Tickets for Museums and/or Galleries',
+    content: 'Tickets for Museums and Galleries',
   },
   {
     id: 21,
     category: 'Leisure Activities',
-    content: 'Tickets to Zoos and/or Botanical Gardens',
+    content: 'Tickets to Zoos and Botanical Gardens',
   },
   {
     id: 22,
     category: 'Leisure Activities',
-    content: 'Tickets to go Clubbing and/or to go to Boat Partys',
+    content: 'Tickets to go Clubbing and to go to Boat Partys',
   },
   {
     id: 23,
@@ -128,7 +128,7 @@ const items = [
   {
     id: 25,
     category: 'Clothing and Shoes',
-    content: 'T-Shirts and/or Shirts',
+    content: 'T-Shirts and Shirts',
   },
   {
     id: 26,
@@ -153,17 +153,17 @@ const items = [
   {
     id: 30,
     category: 'Clothing and Shoes',
-    content: 'Jewelry and/or Watches',
+    content: 'Jewelry and Watches',
   },
   {
     id: 31,
     category: 'Electronics',
-    content: 'Computers and/or Notebooks',
+    content: 'Computers and Notebooks',
   },
   {
     id: 32,
     category: 'Electronics',
-    content: 'Headphones and/or Earbuds',
+    content: 'Headphones and Earbuds',
   },
   {
     id: 33,
@@ -173,7 +173,7 @@ const items = [
   {
     id: 34,
     category: 'Electronics',
-    content: 'Cameras and/or Camera Equipment',
+    content: 'Cameras and Camera Equipment',
   },
   {
     id: 35,
@@ -183,7 +183,7 @@ const items = [
   {
     id: 36,
     category: 'Electronics',
-    content: 'Hairdryers and/or Styling Equipment',
+    content: 'Hairdryers and Styling Equipment',
   },
 ];
 

@@ -1,6 +1,6 @@
 /**
 *
-* List
+* List Container
 *
 */
 
@@ -11,14 +11,22 @@ import items from 'components/Items';
 import buttonHierarchy from 'components/ButtonHierarchy';
 import _ from 'lodash';
 
+import styles from './List.css';
+
 class List extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   constructor() {
+    const colors = ['red', 'green', 'blue', 'orange', 'black'];
+    const RandomizedColors = _.shuffle(colors);
+    const currentColor = RandomizedColors.slice(0, 1);
+
     const RandomizedItems = _.shuffle(items);
     const RandomizedButtonHierarchy = _.shuffle(buttonHierarchy);
+
     super();
     this.state = {
       itemsList: RandomizedItems,
       hierarchy: RandomizedButtonHierarchy,
+      color: currentColor[0],
       currentPage: 1,
       itemsPerPage: 6,
       href: '',
@@ -35,7 +43,7 @@ class List extends React.PureComponent { // eslint-disable-line react/prefer-sta
 
 
   render() {
-    const { itemsList, hierarchy, currentPage, itemsPerPage, isLastPage } = this.state;
+    const { itemsList, hierarchy, currentPage, itemsPerPage, isLastPage, href, color } = this.state;
 
     // Logic for displaying items
     const indexOfLastItem = currentPage * itemsPerPage;
@@ -47,21 +55,26 @@ class List extends React.PureComponent { // eslint-disable-line react/prefer-sta
     const next = currentPage;
     const currentHierarchy = hierarchy.slice(current, next);
 
+    // Logic for changing the 'Next' button text and action
     if (currentPage === (itemsList.length / itemsPerPage)) {
       this.setState({
         isLastPage: true,
         href: '/survey',
       });
+    } else if (currentPage > (itemsList.length / itemsPerPage)) {
+      this.setState({
+        currentPage: (itemsList.length / itemsPerPage),
+      });
     }
 
-    const renderItems = currentItems.map((item) => <SimpleCard key={item.id} id={item.id} text={item.content} hierarchy={currentHierarchy} page={currentPage} />);
+    const renderItems = currentItems.map((item) => <SimpleCard key={item.id} id={item.id} text={item.content} buttonColor={color} hierarchy={currentHierarchy} page={currentPage} />);
 
     return (
-      <div>
-        <Row>
+      <div className={`clearfix ${styles.container}`}>
+        <Row className={styles.row}>
           {renderItems}
         </Row>
-        <Button onClick={this.handleClick} next href={this.state.href}>{isLastPage ? 'Finish' : 'Next'}</Button>
+        <Button color="outline-secondary" className="float-right" size="lg" onClick={this.handleClick} href={href}>{isLastPage ? 'Finish' : 'Next'}</Button>
 
       </div>
     );
