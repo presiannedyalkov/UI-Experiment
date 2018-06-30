@@ -1,0 +1,24 @@
+:local(.radio) > label {
+  margin: 0 0.5rem;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+}
+:local(.formgroupScale) {
+  margin: 0 0.5rem;
+  padding: 0;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+:local(.formgroupContainer) {
+  height: 10rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+:local(.formgroupContainer) > legend {
+  font-size: 1rem;
+  padding: 0 1rem;
+}

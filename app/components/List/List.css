@@ -1,13 +1,16 @@
 :local(.row) {
   display: flex;
   flex-wrap: wrap;
-
+  padding: 1rem 1rem 0;
 }
 :local(.container) {
-  max-width: 992px;
-  margin: 50px auto;
-  padding: 20px;
+  margin: 0 auto;
+  padding: 1rem;
   background-color: white;
-  border-radius: 5px;
-  border: 1px solid #f0f0f0;
+  border-radius: 0.25rem;
+  border: 2px solid #f0f0f0;
+}
+:local(.button) {
+  float: right;
+  margin-right: 1rem;
 }
