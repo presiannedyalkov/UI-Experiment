@@ -14,13 +14,13 @@ import Item from 'components/Item';
 import Statistics from 'components/Statistics';
 
 // Data objects
-import items from 'components/Items';
+import items from 'components/ItemsDemo';
 import buttonHierarchy from 'components/ButtonHierarchy';
 
 // Styles
 import styles from './List.css';
 
-class List extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+class List extends React.PureComponent {
   constructor() {
     const allColors = ['red', 'green', 'blue', 'orange', 'black'];
     const RandomizedColors = _.shuffle(allColors);
@@ -42,6 +42,7 @@ class List extends React.PureComponent { // eslint-disable-line react/prefer-sta
       finishedItems: 0,
       finishedItemsPerPage: 0,
       buttonIsShown: false,
+      itemsAreShown: true,
     };
     this.changePage = this.changePage.bind(this);
     this.handleFinishWithItem = this.handleFinishWithItem.bind(this);
@@ -71,7 +72,7 @@ class List extends React.PureComponent { // eslint-disable-line react/prefer-sta
 
 
   render() {
-    const { itemsList, hierarchy, currentPage, itemsPerPage, isLastPage, href, colors, color, finishedItems, finishedItemsPerPage, buttonIsShown } = this.state;
+    const { itemsList, hierarchy, currentPage, itemsPerPage, isLastPage, href, colors, color, finishedItems, finishedItemsPerPage, buttonIsShown, itemsAreShown } = this.state;
 
     // Logic for displaying items
     const indexOfLastItem = currentPage * itemsPerPage;
@@ -94,7 +95,7 @@ class List extends React.PureComponent { // eslint-disable-line react/prefer-sta
       });
     } else if (currentPage > allPages) {
       this.setState({
-        currentPage: allPages,
+        itemsAreShown: false,
       });
     }
 
@@ -107,7 +108,7 @@ class List extends React.PureComponent { // eslint-disable-line react/prefer-sta
     const renderItems = currentItems.map((item) => <Item handleFinishWithItem={this.handleFinishWithItem} key={item.id} id={item.id} text={item.content} buttonColor={color} hierarchy={currentHierarchy} page={currentPage} />);
 
     return (
-      <Grid className={styles.container}>
+      <Grid className={`${styles.container} ${!itemsAreShown ? 'hidden' : null}`}>
         <Statistics currentPage={currentPage} allPages={allPages} finishedItemsPerPage={finishedItemsPerPage} itemsPerPage={itemsPerPage} finishedItems={finishedItems} allItems={allItems} color={color} colors={colors} />
         <Row className={styles.row}>
           {renderItems}
