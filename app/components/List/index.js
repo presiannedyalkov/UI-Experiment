@@ -82,7 +82,6 @@ class List extends React.PureComponent { // eslint-disable-line react/prefer-sta
     const current = currentPage - 1;
     const next = currentPage;
     const currentHierarchy = hierarchy.slice(current, next);
-    const currentHierarchyId = currentHierarchy[0].id;
 
     const allItems = itemsList.length;
     const allPages = (allItems / itemsPerPage);
@@ -105,7 +104,7 @@ class List extends React.PureComponent { // eslint-disable-line react/prefer-sta
       this.showButton();
     }
 
-    const renderItems = currentItems.map((item) => <Item hierarchyId={currentHierarchyId} handleFinishWithItem={this.handleFinishWithItem} key={item.id} id={item.id} text={item.content} buttonColor={color} hierarchy={currentHierarchy} page={currentPage} />);
+    const renderItems = currentItems.map((item) => <Item handleFinishWithItem={this.handleFinishWithItem} key={item.id} id={item.id} text={item.content} buttonColor={color} hierarchy={currentHierarchy} page={currentPage} />);
 
     return (
       <Grid className={styles.container}>

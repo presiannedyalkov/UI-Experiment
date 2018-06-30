@@ -43,7 +43,7 @@ class Item extends React.Component {
 
   render() {
     const { buttonIsClicked, scaleIsClicked, buttonValue, scaleValue } = this.state;
-    const { id, text, hierarchyId } = this.props;
+    const { id, text } = this.props;
 
     return (
       <Col sm="6" md="4" className={styles.col}>
@@ -51,7 +51,7 @@ class Item extends React.Component {
           <div className={styles.titleContainer}>
             <Panel.Title className={styles.itemTitle}><strong>#{id}</strong><br />{text}</Panel.Title>
           </div>
-          <ItemBody hierarchyId={hierarchyId} buttonValue={buttonValue} itemId={id} scaleValue={scaleValue} buttonIsClicked={buttonIsClicked} handleButtonClick={this.handleButtonClick} scaleIsClicked={scaleIsClicked} handleScaleClick={this.handleScaleClick} {...this.props} />
+          <ItemBody buttonValue={buttonValue} itemId={id} scaleValue={scaleValue} buttonIsClicked={buttonIsClicked} handleButtonClick={this.handleButtonClick} scaleIsClicked={scaleIsClicked} handleScaleClick={this.handleScaleClick} {...this.props} />
         </Panel>
       </Col>
     );
@@ -61,7 +61,6 @@ class Item extends React.Component {
 Item.propTypes = {
   text: PropTypes.string,
   id: PropTypes.number,
-  hierarchyId: PropTypes.number,
   handleFinishWithItem: PropTypes.function,
 };
 
