@@ -11,16 +11,13 @@ import PropTypes from 'prop-types';
 // Styles
 import styles from './Button.css';
 
-class Button extends React.Component { // eslint-disable-line react/prefer-stateless-function
-  render() {
-    const { type, color, handleButtonClick, children } = this.props;
-
-    return (
-      <div>
-        <button value={type} onClick={handleButtonClick} className={`btn btn-block btn-${type} btn-${color} ${styles.button}`}>{children}</button>
-      </div>
-    );
-  }
+function Button(props) {
+  const { type, color, handleButtonClick, children } = props;
+  return (
+    <div>
+      <button value={type} onClick={handleButtonClick} className={`btn btn-block btn-${type} btn-${color} ${styles.button}`}>{children}</button>
+    </div>
+  );
 }
 
 Button.propTypes = {

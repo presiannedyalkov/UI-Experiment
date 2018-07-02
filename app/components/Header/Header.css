@@ -1,0 +1,5 @@
+:local(.header) {
+  height: 10rem;
+  background-color: #2f3640;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}

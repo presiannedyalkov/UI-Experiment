@@ -1,6 +1,6 @@
 /**
 *
-* ItemBody
+* ItemBody component
 *
 */
 
@@ -17,10 +17,12 @@ import styles from './ItemBody.css';
 
 function ItemBody(props) {
   const { buttonIsClicked, scaleIsClicked, buttonValue, scaleValue, itemId, hierarchy } = props;
+  const showButtons = !buttonIsClicked && !scaleIsClicked;
+  const showScale = buttonIsClicked && !scaleIsClicked;
 
-  if (!buttonIsClicked && !scaleIsClicked) {
+  if (showButtons) {
     return <ButtonGroup {...props} />;
-  } else if (buttonIsClicked && !scaleIsClicked) {
+  } else if (showScale) {
     return <Scale {...props} />;
   }
   return <div className={styles.textBox}><p>Data for Item <strong>#{itemId}</strong> is stored. <br />clicked button: <strong>{buttonValue}</strong> <br />from hierarchy <strong>#{hierarchy[0].id}: {hierarchy[0].primaryAction}, {hierarchy[0].secondaryAction}, {hierarchy[0].tertiaryAction}</strong> <br />clicked value on scale: <strong>{scaleValue}</strong></p></div>;

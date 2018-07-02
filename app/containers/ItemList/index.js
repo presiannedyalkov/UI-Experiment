@@ -1,6 +1,6 @@
 /**
 *
-* List Container
+* ItemList Container
 *
 */
 
@@ -10,17 +10,18 @@ import _ from 'lodash';
 
 // Components
 import { Button, Grid, Row } from 'react-bootstrap';
-import Item from 'components/Item';
+import Item from 'containers/Item';
 import Statistics from 'components/Statistics';
 
 // Data objects
+// import items from 'components/Items';
 import items from 'components/ItemsDemo';
 import buttonHierarchy from 'components/ButtonHierarchy';
 
 // Styles
-import styles from './List.css';
+import styles from './ItemList.css';
 
-class List extends React.PureComponent {
+class ItemList extends React.PureComponent {
   constructor() {
     const allColors = ['red', 'green', 'blue', 'orange', 'black'];
     const RandomizedColors = _.shuffle(allColors);
@@ -122,4 +123,4 @@ class List extends React.PureComponent {
   }
 }
 
-export default List;
+export default ItemList;
