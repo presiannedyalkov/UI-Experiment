@@ -15,7 +15,7 @@ const items = [
     category: 'Health and Fitness',
     content: 'Sportswear',
   },
-  {
+  /*{
     id: 3,
     category: 'Health and Fitness',
     content: 'Workout Equipment',
@@ -25,7 +25,7 @@ const items = [
     category: 'Health and Fitness',
     content: 'Cookbooks',
   },
-  /*{
+  {
     id: 5,
     category: 'Health and Fitness',
     content: 'Protein bars and -shakes',

@@ -20,7 +20,8 @@ class Item extends React.Component {
     super();
     this.state = {
       buttonIsClicked: false,
-      buttonValue: '',
+      visualTypeValue: '',
+      actionTypeValue: '',
       scaleIsClicked: false,
       scaleValue: 0,
     };
@@ -30,7 +31,8 @@ class Item extends React.Component {
   handleButtonClick(event) {
     this.setState({
       buttonIsClicked: true,
-      buttonValue: event.currentTarget.value,
+      visualTypeValue: event.currentTarget.dataset.visualType,
+      actionTypeValue: event.currentTarget.dataset.actionType,
     });
   }
   handleScaleClick(event) {
@@ -42,16 +44,16 @@ class Item extends React.Component {
   }
 
   render() {
-    const { buttonIsClicked, scaleIsClicked, buttonValue, scaleValue } = this.state;
+    const { buttonIsClicked, scaleIsClicked, visualTypeValue, actionTypeValue, scaleValue } = this.state;
     const { id, text } = this.props;
 
     return (
       <Col sm="6" md="4" className={styles.col}>
         <Panel className="text-center">
           <div className={styles.titleContainer}>
-            <Panel.Title className={styles.itemTitle}><strong>#{id}</strong><br />{text}</Panel.Title>
+            <Panel.Title className={styles.itemTitle}>{text}</Panel.Title>
           </div>
-          <ItemBody buttonValue={buttonValue} itemId={id} scaleValue={scaleValue} buttonIsClicked={buttonIsClicked} handleButtonClick={this.handleButtonClick} scaleIsClicked={scaleIsClicked} handleScaleClick={this.handleScaleClick} {...this.props} />
+          <ItemBody actionTypeValue={actionTypeValue} visualTypeValue={visualTypeValue} itemId={id} scaleValue={scaleValue} buttonIsClicked={buttonIsClicked} handleButtonClick={this.handleButtonClick} scaleIsClicked={scaleIsClicked} handleScaleClick={this.handleScaleClick} {...this.props} />
         </Panel>
       </Col>
     );

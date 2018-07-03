@@ -20,7 +20,6 @@ function Scale(props) {
     return (
       <div>
         <Radio value={value} onClick={props.handleScaleClick} bsClass={styles.radio} type="radio" name="radioGroup">
-          {value}
         </Radio>{' '}
       </div>
     );
@@ -29,7 +28,7 @@ function Scale(props) {
   return (
     <form>
       <FormGroup bsClass={styles.formgroupContainer}>
-        <legend>Lorem ipsum dolor sit amet nullam sodales.</legend>
+        <legend>How likely are you to purchase this item in the next 6 months?</legend>
         <FormGroup bsClass={styles.formgroupScale}>
           {scaleInput}
         </FormGroup>

@@ -21,9 +21,9 @@ function ButtonGroup(props) {
   const handleButtonClick = props.handleButtonClick;
   return (
     <div className={styles.buttonContainer}>
-      <Button handleButtonClick={handleButtonClick} type={visualHierarchy.primaryAction} color={color}>{actionHierarchy.primaryAction}</Button>
-      <Button handleButtonClick={handleButtonClick} type={visualHierarchy.secondaryAction} color={color}>{actionHierarchy.secondaryAction}</Button>
-      <Button handleButtonClick={handleButtonClick} type={visualHierarchy.tertiaryAction} color={color}>{actionHierarchy.tertiaryAction}</Button>
+      <Button handleButtonClick={handleButtonClick} visualType={visualHierarchy.primaryAction} actionType={actionHierarchy.primaryAction} color={color}>{actionHierarchy.primaryAction}</Button>
+      <Button handleButtonClick={handleButtonClick} visualType={visualHierarchy.secondaryAction} actionType={actionHierarchy.secondaryAction} color={color}>{actionHierarchy.secondaryAction}</Button>
+      <Button handleButtonClick={handleButtonClick} visualType={visualHierarchy.tertiaryAction} actionType={actionHierarchy.tertiaryAction} color={color}>{actionHierarchy.tertiaryAction}</Button>
     </div>
   );
 }

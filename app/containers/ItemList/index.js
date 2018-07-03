@@ -12,6 +12,8 @@ import _ from 'lodash';
 import { Button, Grid, Row } from 'react-bootstrap';
 import Item from 'containers/Item';
 import Statistics from 'components/Statistics';
+import Success from 'components/Success';
+// import AuthenticityCheck from 'components/AuthenticityCheck';
 
 // Data objects
 // import items from 'components/Items';
@@ -40,7 +42,7 @@ class ItemList extends React.PureComponent {
       colors: allColors,
       color: currentColor[0],
       currentPage: 1,
-      itemsPerPage: 2,
+      itemsPerPage: 1,
       href: '',
       isLastPage: false,
       finishedItems: 0,
@@ -111,19 +113,22 @@ class ItemList extends React.PureComponent {
     }
 
     const renderItems = currentItems.map((item) => <Item handleFinishWithItem={this.handleFinishWithItem} key={item.id} id={item.id} text={item.content} buttonColor={color} actionHierarchy={currentActionHierarchy} visualHierarchy={currentVisualHierarchy} page={currentPage} />);
-
-    return (
-      <Grid className={`${styles.container} ${!itemsAreShown ? 'hidden' : null}`}>
-        <Statistics currentPage={currentPage} allPages={allPages} finishedItemsPerPage={finishedItemsPerPage} itemsPerPage={itemsPerPage} finishedItems={finishedItems} allItems={allItems} color={color} colors={colors} />
-        <Row className={styles.row}>
-          {renderItems}
-        </Row>
-        <div className="clearfix">
-          <Button className={`btn-secondary ${styles.button} ${!buttonIsShown ? 'invisible' : null}`} onClick={this.changePage} href={href}>{isLastPage ? 'Finish' : 'Next'}</Button>
+    if (itemsAreShown) {
+      return (
+        <div>
+          <Grid className={`${styles.container} ${!itemsAreShown ? 'hidden' : null}`}>
+            <Statistics currentPage={currentPage} allPages={allPages} finishedItemsPerPage={finishedItemsPerPage} itemsPerPage={itemsPerPage} finishedItems={finishedItems} allItems={allItems} color={color} colors={colors} />
+            <Row className={styles.row}>
+              {renderItems}
+            </Row>
+            <div className="clearfix">
+              <Button className={`btn-secondary ${styles.button} ${!buttonIsShown ? 'invisible' : null}`} onClick={this.changePage} href={href}>{isLastPage ? 'Finish' : 'Next'}</Button>
+            </div>
+          </Grid>
         </div>
-
-      </Grid>
-    );
+      );
+    }
+    return <Success visibility={!itemsAreShown ? 'visible' : 'hidden'} />;
   }
 }
 

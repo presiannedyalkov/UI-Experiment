@@ -12,7 +12,8 @@ import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
 import Experiment from 'containers/ExperimentPage/Loadable';
-import Survey from 'containers/SurveyPage/Loadable';
+import SurveyPage from 'containers/SurveyPage/Loadable';
+import ThankYouPage from 'containers/ThankYouPage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 export default function App() {
@@ -21,7 +22,8 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/experiment" component={Experiment} />
-        <Route exact path="/survey" component={Survey} />
+        <Route exact path="/survey" component={SurveyPage} />
+        <Route exact path="/thankyou" component={ThankYouPage} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>

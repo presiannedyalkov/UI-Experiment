@@ -6,12 +6,4 @@
 }
 :local(.panel) {
   padding: 3rem;
-  width: 50rem;
-  margin: 0 auto;
-}
-:local(.form) {
-  width: 10em;
-}
-:local(.form) * {
-  font-family: inherit;
 }
