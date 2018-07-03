@@ -15,20 +15,22 @@ import Button from 'components/Button';
 import styles from './ButtonGroup.css';
 
 function ButtonGroup(props) {
-  const hierarchy = props.hierarchy[0];
+  const actionHierarchy = props.actionHierarchy[0];
+  const visualHierarchy = props.visualHierarchy[0];
   const color = props.buttonColor;
   const handleButtonClick = props.handleButtonClick;
   return (
     <div className={styles.buttonContainer}>
-      <Button handleButtonClick={handleButtonClick} type="primary" color={color}>{hierarchy.primaryAction}</Button>
-      <Button handleButtonClick={handleButtonClick} type="outline-primary" color={color}>{hierarchy.secondaryAction}</Button>
-      <Button handleButtonClick={handleButtonClick} type="link" color={color}>{hierarchy.tertiaryAction}</Button>
+      <Button handleButtonClick={handleButtonClick} type={visualHierarchy.primaryAction} color={color}>{actionHierarchy.primaryAction}</Button>
+      <Button handleButtonClick={handleButtonClick} type={visualHierarchy.secondaryAction} color={color}>{actionHierarchy.secondaryAction}</Button>
+      <Button handleButtonClick={handleButtonClick} type={visualHierarchy.tertiaryAction} color={color}>{actionHierarchy.tertiaryAction}</Button>
     </div>
   );
 }
 
 ButtonGroup.propTypes = {
-  hierarchy: PropTypes.array,
+  actionHierarchy: PropTypes.array,
+  visualHierarchy: PropTypes.array,
   buttonColor: PropTypes.string,
   handleButtonClick: PropTypes.object,
 };

@@ -16,7 +16,7 @@ import Scale from 'components/Scale';
 import styles from './ItemBody.css';
 
 function ItemBody(props) {
-  const { buttonIsClicked, scaleIsClicked, buttonValue, scaleValue, itemId, hierarchy } = props;
+  const { buttonIsClicked, scaleIsClicked, buttonValue, scaleValue, itemId, actionHierarchy, visualHierarchy } = props;
   const showButtons = !buttonIsClicked && !scaleIsClicked;
   const showScale = buttonIsClicked && !scaleIsClicked;
 
@@ -25,7 +25,16 @@ function ItemBody(props) {
   } else if (showScale) {
     return <Scale {...props} />;
   }
-  return <div className={styles.textBox}><p>Data for Item <strong>#{itemId}</strong> is stored. <br />clicked button: <strong>{buttonValue}</strong> <br />from hierarchy <strong>#{hierarchy[0].id}: {hierarchy[0].primaryAction}, {hierarchy[0].secondaryAction}, {hierarchy[0].tertiaryAction}</strong> <br />clicked value on scale: <strong>{scaleValue}</strong></p></div>;
+  return (
+    <div className={styles.textBox}>
+      <p>Data for Item <strong>#{itemId}</strong> is stored. <br />
+      clicked button: <strong>{buttonValue}</strong> <br />
+      from action hierarchy <strong>#{actionHierarchy[0].id}: {actionHierarchy[0].primaryAction}, {actionHierarchy[0].secondaryAction}, {actionHierarchy[0].tertiaryAction}</strong> <br />
+      and visual hierarchy <strong>#{visualHierarchy[0].id}: {visualHierarchy[0].primaryAction}, {visualHierarchy[0].secondaryAction}, {visualHierarchy[0].tertiaryAction}</strong> <br />
+      clicked value on scale: <strong>{scaleValue}</strong>
+      </p>
+    </div>
+  );
 }
 
 ItemBody.propTypes = {
@@ -34,7 +43,8 @@ ItemBody.propTypes = {
   buttonValue: PropTypes.string,
   scaleValue: PropTypes.number,
   itemId: PropTypes.number,
-  hierarchy: PropTypes.array,
+  actionHierarchy: PropTypes.array,
+  visualHierarchy: PropTypes.array,
 };
 
 export default ItemBody;

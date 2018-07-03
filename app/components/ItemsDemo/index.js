@@ -25,7 +25,7 @@ const items = [
     category: 'Health and Fitness',
     content: 'Cookbooks',
   },
-  {
+  /*{
     id: 5,
     category: 'Health and Fitness',
     content: 'Protein bars and -shakes',
@@ -65,7 +65,7 @@ const items = [
     category: 'Food and Drinks',
     content: 'Beer at Craft Beer Tours and Tastings',
   },
-  /*{
+  {
     id: 13,
     category: 'Hotels and Travel',
     content: 'Outdoor and Adventure Vacations',

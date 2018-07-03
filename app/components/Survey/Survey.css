@@ -1,0 +1,9 @@
+:local(.button) {
+  margin: 2rem;
+}
+:local(.grid) {
+  margin-top: -3rem;
+}
+:local(.panel) {
+  padding: 3rem;
+}

@@ -15,7 +15,6 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 import 'sanitize.css/sanitize.css';
-import WebFont from 'webfontloader';
 
 // Import root app
 import App from 'containers/App';
@@ -51,12 +50,6 @@ const initialState = {};
 const history = createHistory();
 const store = configureStore(initialState, history);
 const MOUNT_NODE = document.getElementById('app');
-
-WebFont.load({
-  google: {
-    families: ['Roboto', 'sans-serif'],
-  },
-});
 
 const render = (messages) => {
   ReactDOM.render(

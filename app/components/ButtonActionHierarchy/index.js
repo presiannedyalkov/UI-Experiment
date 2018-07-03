@@ -1,10 +1,10 @@
 /**
 *
-* buttonHierarchy
+* buttonActionHierarchy
 *
 */
 
-const buttonHierarchy = [
+const buttonActionHierarchy = [
   {
     id: 1,
     primaryAction: 'Buy',
@@ -43,4 +43,4 @@ const buttonHierarchy = [
   },
 ];
 
-export default buttonHierarchy;
+export default buttonActionHierarchy;

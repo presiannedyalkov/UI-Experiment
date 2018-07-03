@@ -16,7 +16,8 @@ import Statistics from 'components/Statistics';
 // Data objects
 // import items from 'components/Items';
 import items from 'components/ItemsDemo';
-import buttonHierarchy from 'components/ButtonHierarchy';
+import buttonActionHierarchy from 'components/ButtonActionHierarchy';
+import buttonVisualHierarchy from 'components/ButtonVisualHierarchy';
 
 // Styles
 import styles from './ItemList.css';
@@ -28,16 +29,18 @@ class ItemList extends React.PureComponent {
     const currentColor = RandomizedColors.slice(0, 1);
 
     const RandomizedItems = _.shuffle(items);
-    const RandomizedButtonHierarchy = _.shuffle(buttonHierarchy);
+    const RandomizedActionHierarchy = _.shuffle(buttonActionHierarchy);
+    const RandomizedVisualHierarchy = _.shuffle(buttonVisualHierarchy);
 
     super();
     this.state = {
       itemsList: RandomizedItems,
-      hierarchy: RandomizedButtonHierarchy,
+      actionHierarchy: RandomizedActionHierarchy,
+      visualHierarchy: RandomizedVisualHierarchy,
       colors: allColors,
       color: currentColor[0],
       currentPage: 1,
-      itemsPerPage: 6,
+      itemsPerPage: 2,
       href: '',
       isLastPage: false,
       finishedItems: 0,
@@ -73,22 +76,23 @@ class ItemList extends React.PureComponent {
 
 
   render() {
-    const { itemsList, hierarchy, currentPage, itemsPerPage, isLastPage, href, colors, color, finishedItems, finishedItemsPerPage, buttonIsShown, itemsAreShown } = this.state;
+    const { itemsList, actionHierarchy, visualHierarchy, currentPage, itemsPerPage, isLastPage, href, colors, color, finishedItems, finishedItemsPerPage, buttonIsShown, itemsAreShown } = this.state;
 
     // Logic for displaying items
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentItems = itemsList.slice(indexOfFirstItem, indexOfLastItem);
 
-    // Logic for displaying button hierarchy
+    // Logic for displaying button action and visual hierarchy
     const current = currentPage - 1;
     const next = currentPage;
-    const currentHierarchy = hierarchy.slice(current, next);
+    const currentActionHierarchy = actionHierarchy.slice(current, next);
+    const currentVisualHierarchy = visualHierarchy.slice(current, next);
 
+    // logic for displaying pages
     const allItems = itemsList.length;
     const allPages = (allItems / itemsPerPage);
 
-    // Logic for changing the 'Next' button text and action
     if (currentPage === allPages) {
       this.setState({
         isLastPage: true,
@@ -100,13 +104,13 @@ class ItemList extends React.PureComponent {
       });
     }
 
-    // Logic for changing items on page
+    // Logic for changing the items on page
     const remainingItemsPerPage = itemsPerPage - finishedItemsPerPage;
     if (remainingItemsPerPage === 0) {
       this.showButton();
     }
 
-    const renderItems = currentItems.map((item) => <Item handleFinishWithItem={this.handleFinishWithItem} key={item.id} id={item.id} text={item.content} buttonColor={color} hierarchy={currentHierarchy} page={currentPage} />);
+    const renderItems = currentItems.map((item) => <Item handleFinishWithItem={this.handleFinishWithItem} key={item.id} id={item.id} text={item.content} buttonColor={color} actionHierarchy={currentActionHierarchy} visualHierarchy={currentVisualHierarchy} page={currentPage} />);
 
     return (
       <Grid className={`${styles.container} ${!itemsAreShown ? 'hidden' : null}`}>
