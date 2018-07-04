@@ -4,3 +4,7 @@
 :local(.panel) {
   padding: 3rem 5rem;
 }
+:local(.button) {
+  float: right;
+  margin-right: 1rem;
+}

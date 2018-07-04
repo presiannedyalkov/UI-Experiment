@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 1rem 1rem 0;
+  padding: 3rem 3rem 0;
 }
 :local(.container) {
   margin: -3rem auto 3rem;

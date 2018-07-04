@@ -2,7 +2,7 @@ import { injectGlobal } from 'styled-components';
 
 /* eslint no-unused-expressions: 0 */
 injectGlobal`
-  html {
+  html, body {
     font-size: 16px;
   }
 
@@ -29,7 +29,9 @@ injectGlobal`
 
   p,
   label {
-    font-family: Georgia, Times, 'Times New Roman', serif;
     line-height: 1.5em;
+  }
+  .btn {
+    font-size: 1rem;
   }
 `;

@@ -12,12 +12,11 @@ import _ from 'lodash';
 import { Button, Grid, Row } from 'react-bootstrap';
 import Item from 'containers/Item';
 import Statistics from 'components/Statistics';
-import Success from 'components/Success';
-// import AuthenticityCheck from 'components/AuthenticityCheck';
+import AuthenticityCheck from 'components/AuthenticityCheck';
 
 // Data objects
-// import items from 'components/Items';
-import items from 'components/ItemsDemo';
+import items from 'components/Items';
+// import items from 'components/ItemsDemo';
 import buttonActionHierarchy from 'components/ButtonActionHierarchy';
 import buttonVisualHierarchy from 'components/ButtonVisualHierarchy';
 
@@ -42,8 +41,7 @@ class ItemList extends React.PureComponent {
       colors: allColors,
       color: currentColor[0],
       currentPage: 1,
-      itemsPerPage: 1,
-      href: '',
+      itemsPerPage: 6,
       isLastPage: false,
       finishedItems: 0,
       finishedItemsPerPage: 0,
@@ -78,7 +76,7 @@ class ItemList extends React.PureComponent {
 
 
   render() {
-    const { itemsList, actionHierarchy, visualHierarchy, currentPage, itemsPerPage, isLastPage, href, colors, color, finishedItems, finishedItemsPerPage, buttonIsShown, itemsAreShown } = this.state;
+    const { itemsList, actionHierarchy, visualHierarchy, currentPage, itemsPerPage, isLastPage, colors, color, finishedItems, finishedItemsPerPage, buttonIsShown, itemsAreShown } = this.state;
 
     // Logic for displaying items
     const indexOfLastItem = currentPage * itemsPerPage;
@@ -98,7 +96,6 @@ class ItemList extends React.PureComponent {
     if (currentPage === allPages) {
       this.setState({
         isLastPage: true,
-        href: '/survey',
       });
     } else if (currentPage > allPages) {
       this.setState({
@@ -122,13 +119,13 @@ class ItemList extends React.PureComponent {
               {renderItems}
             </Row>
             <div className="clearfix">
-              <Button className={`btn-secondary ${styles.button} ${!buttonIsShown ? 'invisible' : null}`} onClick={this.changePage} href={href}>{isLastPage ? 'Finish' : 'Next'}</Button>
+              <Button className={`btn-secondary ${styles.button} ${!buttonIsShown ? 'invisible' : null}`} onClick={this.changePage} href="">{isLastPage ? 'Finish' : 'Next'}</Button>
             </div>
           </Grid>
         </div>
       );
     }
-    return <Success visibility={!itemsAreShown ? 'visible' : 'hidden'} />;
+    return <AuthenticityCheck visibility={!itemsAreShown ? 'visible' : 'hidden'} />;
   }
 }
 
