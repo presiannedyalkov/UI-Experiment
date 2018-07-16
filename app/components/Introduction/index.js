@@ -18,7 +18,7 @@ function Introduction() {
   return (
     <div>
       <Header />
-      <Grid className={styles.grid}>
+      <Grid>
         <Row>
           <Panel className={styles.panel}>
             <Panel.Body>
@@ -46,7 +46,7 @@ function Introduction() {
 
               <strong>Compensation</strong><br />
               You will not receive any compensation for taking part in this survey. There will be no
-              expenses on your site other than the time it will take you to answer the survey questions.<br /><br />
+              expenses on your side other than the time it will take you to answer the survey questions.<br /><br />
 
               <strong>Contact</strong><br />
               In case of any further questions concerning this survey please contact <a href="mailto:experiment2018ref5mj@gmail.com">experiment2018ref5mj@gmail.com</a>.<br /><br />
@@ -55,7 +55,7 @@ function Introduction() {
               and agree with the depicted terms and conditions.</strong>
             </Panel.Body>
             <div className="clearfix">
-              <Button className={`btn-primary pull-right ${styles.button}`} href="/experiment">Continue</Button>
+              <Button className={`btn-secondary pull-right ${styles.button}`} href="/experiment">Continue</Button>
             </div>
           </Panel>
         </Row>

@@ -15,7 +15,7 @@ const items = [
     category: 'Health and Fitness',
     content: 'Sportswear',
   },
-  /*{
+  /* {
     id: 3,
     category: 'Health and Fitness',
     content: 'Workout Equipment',
@@ -184,7 +184,7 @@ const items = [
     id: 36,
     category: 'Electronics',
     content: 'Hairdryers and Styling Equipment',
-  },*/
+  }, */
 ];
 
 

@@ -1,17 +1,13 @@
-:local(.row) {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 3rem 3rem 0;
-}
-:local(.container) {
-  margin: -3rem auto 3rem;
-  padding: 1rem;
-  background-color: white;
-  border-radius: 0.25rem;
-  border: 2px solid #f0f0f0;
-}
 :local(.button) {
   float: right;
   margin-right: 1rem;
+}
+:local(.panel) {
+  margin-top: -3rem;
+  padding: 3rem 5rem;
+}
+:local(.panelBody) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

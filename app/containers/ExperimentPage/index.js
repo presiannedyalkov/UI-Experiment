@@ -6,65 +6,62 @@
 
 // Libraries
 import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
-import { compose } from 'redux';
 
 // Components
+import { Grid, Row } from 'react-bootstrap';
+import Header from 'components/Header';
 import Instruction from 'components/Instruction';
 import ItemList from 'containers/ItemList';
-import Header from 'components/Header';
+import AuthenticityCheck from 'components/AuthenticityCheck';
+import Survey from 'components/Survey';
+import ThankYou from 'components/ThankYou';
 
-//
-import injectReducer from 'utils/injectReducer';
-import makeSelectExperiment from './selectors';
-import reducer from './reducer';
+// import Statistics from 'components/Statistics';
 
 export class Experiment extends React.PureComponent {
   constructor() {
     super();
     this.state = {
-      instructionRead: false,
+      step: 1,
     };
-    this.handleInstructionClick = this.handleInstructionClick.bind(this);
+    this.handleChangeStep = this.handleChangeStep.bind(this);
   }
 
-  handleInstructionClick() {
+  handleChangeStep() {
     this.setState({
-      instructionRead: true,
+      step: this.state.step + 1,
     });
   }
   render() {
-    const { instructionRead } = this.state;
+    const { step } = this.state;
+
+    const Page = (currentStep) => {
+      switch (currentStep) {
+        case 2:
+          return <ItemList handleChangeStep={this.handleChangeStep} />;
+        case 3:
+          return <AuthenticityCheck handleChangeStep={this.handleChangeStep} />;
+        case 4:
+          return <Survey handleChangeStep={this.handleChangeStep} />;
+        case 5:
+          return <ThankYou />;
+        default:
+          return <Instruction handleChangeStep={this.handleChangeStep} />;
+      }
+    };
+
     return (
       <div>
         <Header />
-        {!instructionRead ? <Instruction handleInstructionClick={this.handleInstructionClick} /> : <ItemList />}
+        <Grid>
+          <Row>
+            {Page(step)}
+          </Row>
+        </Grid>
       </div>
     );
   }
 }
 
-Experiment.propTypes = {
-  dispatch: PropTypes.func.isRequired,
-};
 
-const mapStateToProps = createStructuredSelector({
-  experiment: makeSelectExperiment(),
-});
-
-function mapDispatchToProps(dispatch) {
-  return {
-    dispatch,
-  };
-}
-
-const withConnect = connect(mapStateToProps, mapDispatchToProps);
-
-const withReducer = injectReducer({ key: 'experiment', reducer });
-
-export default compose(
-  withReducer,
-  withConnect,
-)(Experiment);
+export default Experiment;

@@ -1,16 +1,12 @@
 :local(.button) {
   margin: 2rem;
 }
-:local(.grid) {
-  margin-top: -3rem;
-}
 :local(.panel) {
+  margin-top: -3rem;
   padding: 3rem 5rem;
-  width: 50rem;
-  margin: 0 auto;
 }
-:local(.form) {
-  width: 10em;
+:local(.form) .form-control {
+  width: 10rem;
 }
 :local(.form) * {
   font-family: inherit;
