@@ -24,7 +24,7 @@ Button.propTypes = {
   visualType: PropTypes.string,
   actionType: PropTypes.string,
   color: PropTypes.string,
-  handleButtonClick: PropTypes.object,
+  handleButtonClick: PropTypes.func,
   children: PropTypes.string,
 };
 

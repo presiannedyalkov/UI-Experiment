@@ -57,7 +57,7 @@ class AuthenticityCheck extends React.Component {
 }
 
 AuthenticityCheck.propTypes = {
-  handleChangeStep: PropTypes.object,
+  handleChangeStep: PropTypes.func,
 };
 
 export default AuthenticityCheck;

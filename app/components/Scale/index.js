@@ -16,10 +16,11 @@ import styles from './Scale.css';
 
 function Scale(props) {
   const scaleRange = [1, 2, 3, 4, 5, 6];
+  const handleScaleClick = props.handleScaleClick;
   const scaleInput = scaleRange.map((value) => { // eslint-disable-line arrow-body-style
     return (
-      <div>
-        <Radio value={value} onClick={props.handleScaleClick} bsClass={styles.radio} type="radio" name="radioGroup">
+      <div key={value.toString()}>
+        <Radio value={value} onClick={handleScaleClick} bsClass={styles.radio} type="radio" name="radioGroup">
         </Radio>{' '}
       </div>
     );
@@ -38,7 +39,7 @@ function Scale(props) {
 }
 
 Scale.propTypes = {
-  handleScaleClick: PropTypes.object,
+  handleScaleClick: PropTypes.func,
 };
 
 export default Scale;

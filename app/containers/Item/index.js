@@ -16,18 +16,22 @@ import ItemBody from 'components/ItemBody';
 import styles from './Item.css';
 
 class Item extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
+      id: props.id,
+      text: props.text,
+      category: props.category,
       buttonIsClicked: false,
       visualTypeValue: '',
       actionTypeValue: '',
       scaleIsClicked: false,
-      scaleValue: 0,
+      scaleValue: null,
     };
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleScaleClick = this.handleScaleClick.bind(this);
   }
+
   handleButtonClick(event) {
     this.setState({
       buttonIsClicked: true,
@@ -38,22 +42,21 @@ class Item extends React.Component {
   handleScaleClick(event) {
     this.setState({
       scaleIsClicked: true,
-      scaleValue: event.currentTarget.value,
+      scaleValue: parseInt(event.currentTarget.value, 10),
     });
-    this.props.handleFinishWithItem();
+    this.props.handleFinishWithItem(this.state);
   }
 
   render() {
-    const { buttonIsClicked, scaleIsClicked, visualTypeValue, actionTypeValue, scaleValue } = this.state;
-    const { id, text } = this.props;
+    const { text, buttonIsClicked, scaleIsClicked, visualTypeValue, actionTypeValue, scaleValue } = this.state;
 
     return (
-      <Col sm="6" md="4" className={styles.col}>
+      <Col sm={6} md={4} className={styles.col}>
         <Panel className="text-center">
           <div className={styles.titleContainer}>
             <Panel.Title className={styles.itemTitle}>{text}</Panel.Title>
           </div>
-          <ItemBody actionTypeValue={actionTypeValue} visualTypeValue={visualTypeValue} itemId={id} scaleValue={scaleValue} buttonIsClicked={buttonIsClicked} handleButtonClick={this.handleButtonClick} scaleIsClicked={scaleIsClicked} handleScaleClick={this.handleScaleClick} {...this.props} />
+          <ItemBody actionTypeValue={actionTypeValue} visualTypeValue={visualTypeValue} scaleValue={scaleValue} buttonIsClicked={buttonIsClicked} handleButtonClick={this.handleButtonClick} scaleIsClicked={scaleIsClicked} handleScaleClick={this.handleScaleClick} {...this.props} />
         </Panel>
       </Col>
     );
@@ -61,9 +64,10 @@ class Item extends React.Component {
 }
 
 Item.propTypes = {
-  text: PropTypes.string,
   id: PropTypes.number,
-  handleFinishWithItem: PropTypes.function,
+  text: PropTypes.string,
+  category: PropTypes.string,
+  handleFinishWithItem: PropTypes.func,
 };
 
 export default Item;

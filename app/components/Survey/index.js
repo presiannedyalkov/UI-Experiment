@@ -59,7 +59,7 @@ function Survey(props) {
 }
 
 Survey.propTypes = {
-  handleChangeStep: PropTypes.object,
+  handleChangeStep: PropTypes.func,
 };
 
 export default Survey;

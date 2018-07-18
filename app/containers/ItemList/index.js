@@ -22,30 +22,36 @@ import buttonVisualHierarchy from 'components/ButtonVisualHierarchy';
 // Styles
 import styles from './ItemList.css';
 
-class ItemList extends React.PureComponent {
+class ItemList extends React.Component {
   constructor() {
+    // We randomize and choose one color for each session
     const allColors = ['red', 'green', 'blue', 'orange', 'black'];
     const RandomizedColors = _.shuffle(allColors);
     const currentColor = RandomizedColors.slice(0, 1);
 
+    // We randomize the items data for each session as well
     const RandomizedItems = _.shuffle(items);
     const RandomizedActionHierarchy = _.shuffle(buttonActionHierarchy);
     const RandomizedVisualHierarchy = _.shuffle(buttonVisualHierarchy);
 
     super();
     this.state = {
-      itemsList: RandomizedItems,
-      actionHierarchy: RandomizedActionHierarchy,
-      visualHierarchy: RandomizedVisualHierarchy,
-      colors: allColors,
       color: currentColor[0],
-      currentPage: 1,
-      itemsPerPage: 1,
-      isLastPage: false,
-      finishedItems: 0,
-      finishedItemsPerPage: 0,
-      buttonIsShown: false,
-      itemsAreShown: true,
+      itemsList: RandomizedItems,
+      items: [],
+      item: {
+        actionHierarchy: RandomizedActionHierarchy,
+        visualHierarchy: RandomizedVisualHierarchy,
+      },
+      pageControl: {
+        currentPage: 1,
+        itemsPerPage: 1,
+        isLastPage: false,
+        finishedItems: 0,
+        finishedItemsPerPage: 0,
+        buttonIsShown: false,
+        itemsAreShown: true,
+      },
     };
     this.changePage = this.changePage.bind(this);
     this.handleFinishWithItem = this.handleFinishWithItem.bind(this);
@@ -53,39 +59,45 @@ class ItemList extends React.PureComponent {
   }
 
   changePage() {
-    this.setState({
+    this.setState((prevState) => ({
+      ...prevState.pageControl,
       buttonIsShown: false,
       finishedItemsPerPage: 0,
       currentPage: this.state.currentPage + 1,
-    });
+    }));
   }
 
-  handleFinishWithItem() {
-    this.setState({
+  handleFinishWithItem(finishedItem) {
+    const item = {
+      id: finishedItem.id,
+      text: finishedItem.text,
+      category: finishedItem.category,
+      visualTypeValue: finishedItem.visualTypeValue,
+      actionTypeValue: finishedItem.actionTypeValue,
+      scaleValue: finishedItem.scaleValue,
+    };
+    this.setState((prevState) => ({
+      ...prevState.pageControl,
       finishedItems: this.state.finishedItems + 1,
       finishedItemsPerPage: this.state.finishedItemsPerPage + 1,
-    });
+      ...prevState.items,
+      items: this.state.items.concat([item]),
+    }));
+    console.log(item);
   }
 
   showButton() {
-    this.setState({
+    this.setState((prevState) => ({
+      ...prevState.pageControl,
       buttonIsShown: true,
-    });
+    }));
   }
 
 
   render() {
-    const {
-      itemsList,
-      actionHierarchy,
-      visualHierarchy,
-      currentPage,
-      itemsPerPage,
-      isLastPage,
-      color,
-      finishedItemsPerPage,
-      buttonIsShown,
-    } = this.state;
+    const { itemsList, color } = this.state;
+    const { actionHierarchy, visualHierarchy } = this.state.item;
+    const { currentPage, itemsPerPage, isLastPage, finishedItemsPerPage, buttonIsShown } = this.state.pageControl;
     const handleChangeStep = this.props.handleChangeStep;
 
     // Logic for displaying items
@@ -119,7 +131,7 @@ class ItemList extends React.PureComponent {
       this.showButton();
     }
 
-    const renderItems = currentItems.map((item) => <Item handleFinishWithItem={this.handleFinishWithItem} key={item.id} id={item.id} text={item.content} buttonColor={color} actionHierarchy={currentActionHierarchy} visualHierarchy={currentVisualHierarchy} page={currentPage} />);
+    const renderItems = currentItems.map((item) => <Item handleFinishWithItem={this.handleFinishWithItem} key={item.id} id={item.id} text={item.text} category={item.category} buttonColor={color} actionHierarchy={currentActionHierarchy} visualHierarchy={currentVisualHierarchy} page={currentPage} />);
 
     return (
       <Panel className={styles.panel}>
@@ -137,7 +149,7 @@ class ItemList extends React.PureComponent {
 }
 
 ItemList.propTypes = {
-  handleChangeStep: PropTypes.object,
+  handleChangeStep: PropTypes.func,
 };
 
 export default ItemList;

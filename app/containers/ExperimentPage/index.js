@@ -63,5 +63,4 @@ export class Experiment extends React.PureComponent {
   }
 }
 
-
 export default Experiment;

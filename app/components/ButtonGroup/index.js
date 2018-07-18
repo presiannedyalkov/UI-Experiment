@@ -32,7 +32,7 @@ ButtonGroup.propTypes = {
   actionHierarchy: PropTypes.array,
   visualHierarchy: PropTypes.array,
   buttonColor: PropTypes.string,
-  handleButtonClick: PropTypes.object,
+  handleButtonClick: PropTypes.func,
 };
 
 export default ButtonGroup;
