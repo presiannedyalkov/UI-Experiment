@@ -30,8 +30,8 @@ function Survey(props) {
           </FormGroup>
           <FormGroup controlId="gender">
             <ControlLabel>Gender</ControlLabel>
-            <FormControl required componentClass="select" placeholder="select">
-              <option disabled selected value=""></option>
+            <FormControl required componentClass="select" placeholder="select" defaultValue="">
+              <option disabled value=""></option>
               <option value="male">male</option>
               <option value="female">female</option>
               <option value="other">other</option>
@@ -40,7 +40,7 @@ function Survey(props) {
           </FormGroup>
           <FormGroup controlId="device">
             <ControlLabel>Device</ControlLabel>
-            <FormControl required componentClass="select" placeholder="select" value={isBrowser ? 'desktop' : 'mobile'}>
+            <FormControl required componentClass="select" placeholder="select" defaultValue={isBrowser ? 'desktop' : 'mobile'}>
               <option value="mobile">mobile</option>
               <option value="desktop">desktop</option>
             </FormControl>

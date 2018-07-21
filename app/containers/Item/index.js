@@ -26,7 +26,7 @@ class Item extends React.Component {
       visualTypeValue: '',
       actionTypeValue: '',
       scaleIsClicked: false,
-      scaleValue: null,
+      scaleValue: 0,
     };
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleScaleClick = this.handleScaleClick.bind(this);
@@ -43,20 +43,19 @@ class Item extends React.Component {
     this.setState({
       scaleIsClicked: true,
       scaleValue: parseInt(event.currentTarget.value, 10),
-    });
-    this.props.handleFinishWithItem(this.state);
+    },
+    () => this.props.handleFinishWithItem(this.state)
+    );
   }
 
   render() {
-    const { text, buttonIsClicked, scaleIsClicked, visualTypeValue, actionTypeValue, scaleValue } = this.state;
-
     return (
       <Col sm={6} md={4} className={styles.col}>
         <Panel className="text-center">
           <div className={styles.titleContainer}>
-            <Panel.Title className={styles.itemTitle}>{text}</Panel.Title>
+            <Panel.Title className={styles.itemTitle}>{this.state.text}</Panel.Title>
           </div>
-          <ItemBody actionTypeValue={actionTypeValue} visualTypeValue={visualTypeValue} scaleValue={scaleValue} buttonIsClicked={buttonIsClicked} handleButtonClick={this.handleButtonClick} scaleIsClicked={scaleIsClicked} handleScaleClick={this.handleScaleClick} {...this.props} />
+          <ItemBody handleButtonClick={this.handleButtonClick} handleScaleClick={this.handleScaleClick} {...this.state} {...this.props} />
         </Panel>
       </Col>
     );

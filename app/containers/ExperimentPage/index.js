@@ -23,6 +23,7 @@ export class Experiment extends React.PureComponent {
     super();
     this.state = {
       step: 1,
+      allItemsData: [],
     };
     this.handleChangeStep = this.handleChangeStep.bind(this);
   }

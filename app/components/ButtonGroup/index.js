@@ -15,22 +15,20 @@ import Button from 'components/Button';
 import styles from './ButtonGroup.css';
 
 function ButtonGroup(props) {
-  const actionHierarchy = props.actionHierarchy[0];
-  const visualHierarchy = props.visualHierarchy[0];
-  const color = props.buttonColor;
-  const handleButtonClick = props.handleButtonClick;
+  const { currentActionHierarchy, currentVisualHierarchy, buttonColor, handleButtonClick } = props;
+
   return (
     <div className={styles.buttonContainer}>
-      <Button handleButtonClick={handleButtonClick} visualType={visualHierarchy.primaryAction} actionType={actionHierarchy.primaryAction} color={color}>{actionHierarchy.primaryAction}</Button>
-      <Button handleButtonClick={handleButtonClick} visualType={visualHierarchy.secondaryAction} actionType={actionHierarchy.secondaryAction} color={color}>{actionHierarchy.secondaryAction}</Button>
-      <Button handleButtonClick={handleButtonClick} visualType={visualHierarchy.tertiaryAction} actionType={actionHierarchy.tertiaryAction} color={color}>{actionHierarchy.tertiaryAction}</Button>
+      <Button handleButtonClick={handleButtonClick} visualType={currentVisualHierarchy.primaryAction} actionType={currentActionHierarchy.primaryAction} color={buttonColor}>{currentActionHierarchy.primaryAction}</Button>
+      <Button handleButtonClick={handleButtonClick} visualType={currentVisualHierarchy.secondaryAction} actionType={currentActionHierarchy.secondaryAction} color={buttonColor}>{currentActionHierarchy.secondaryAction}</Button>
+      <Button handleButtonClick={handleButtonClick} visualType={currentVisualHierarchy.tertiaryAction} actionType={currentActionHierarchy.tertiaryAction} color={buttonColor}>{currentActionHierarchy.tertiaryAction}</Button>
     </div>
   );
 }
 
 ButtonGroup.propTypes = {
-  actionHierarchy: PropTypes.array,
-  visualHierarchy: PropTypes.array,
+  currentActionHierarchy: PropTypes.object,
+  currentVisualHierarchy: PropTypes.object,
   buttonColor: PropTypes.string,
   handleButtonClick: PropTypes.func,
 };
