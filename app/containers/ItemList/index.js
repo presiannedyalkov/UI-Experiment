@@ -14,10 +14,10 @@ import { Button, Panel } from 'react-bootstrap';
 import Item from 'containers/Item';
 
 // Data objects
-// import items from 'components/Items';
-import items from 'components/ItemsDemo';
-import buttonActionHierarchy from 'components/ButtonActionHierarchy';
-import buttonVisualHierarchy from 'components/ButtonVisualHierarchy';
+// import items from 'data/Items';
+import items from 'data/ItemsDemo';
+import buttonActionHierarchy from 'data/ButtonActionHierarchy';
+import buttonVisualHierarchy from 'data/ButtonVisualHierarchy';
 
 // Styles
 import styles from './ItemList.css';

@@ -37,7 +37,7 @@ function Introduction() {
               All inquired data will be used for research purposes only and will be treated
               confidentially and anonymously. The collected data will be statistically analyzed on a group level,
               meaning that the results cannot be attributed to any single participant. All data will be saved and
-              archived in accordance with the current regulations.<br /><br />
+              archived in accordance with the current regulations in Germany.<br /><br />
 
               <strong>Voluntary participation</strong><br />
               Your participation in this survey is completely voluntary. You may withdraw
@@ -49,11 +49,12 @@ function Introduction() {
               expenses on your side other than the time it will take you to answer the survey questions.<br /><br />
 
               <strong>Contact</strong><br />
-              In case of any further questions concerning this survey please contact <a href="mailto:experiment2018ref5mj@gmail.com">experiment2018ref5mj@gmail.com</a>.<br /><br />
+              In case of any further questions concerning this survey please contact <a href="mailto:info@ui-experiment.koeln">info@ui-experiment.koeln</a>.<br /><br />
 
               <strong>By proceeding to the following page you declare that you have read and understood all of the above
               and agree with the depicted terms and conditions.</strong>
             </Panel.Body>
+
             <div className="clearfix">
               <Button className={`btn-secondary pull-right ${styles.button}`} href="/experiment">Continue</Button>
             </div>
