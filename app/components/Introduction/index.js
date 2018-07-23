@@ -20,7 +20,7 @@ function Introduction() {
       <Header />
       <Grid>
         <Row>
-          <Panel className={styles.panel}>
+          <Panel className="panel">
             <Panel.Body>
               <Panel.Title><h2>Participant Information</h2></Panel.Title>
             </Panel.Body>

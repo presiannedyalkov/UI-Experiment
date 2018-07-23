@@ -10,12 +10,9 @@ import React from 'react';
 // Components
 import { Panel, Form, FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
 
-// Styles
-import styles from './ThankYou.css';
-
 function ThankYou() {
   return (
-    <Panel className={styles.panel}>
+    <Panel className="panel">
       <Panel.Body>
         <Panel.Title><h2>Final words</h2></Panel.Title>
       </Panel.Body>
@@ -39,7 +36,7 @@ function ThankYou() {
         about the project, please fill out the form and click send. We
         will contact you in a couple of weeks when the experiment is concluded.<br /><br />
 
-        <Form className={styles.form} inline>
+        <Form inline>
           <FormGroup controlId="formInlineName">
             <ControlLabel>Name</ControlLabel>{' '}
             <FormControl type="text" placeholder="J. Doe" />

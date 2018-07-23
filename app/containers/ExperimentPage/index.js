@@ -23,16 +23,47 @@ export class Experiment extends React.PureComponent {
     super();
     this.state = {
       step: 1,
-      allItemsData: [],
+      sessionColor: '',
+      allFinishedItemsData: [],
+      participantAge: null,
+      participantGender: '',
+      participantDevice: '',
+      onlinePurchasingFrequency: null,
+      sendData: false,
     };
     this.handleChangeStep = this.handleChangeStep.bind(this);
   }
 
-  handleChangeStep() {
+  componentDidUpdate() {
+    if (this.state.sendData === true) {
+    //  console.log(this.state);
+    }
+  }
+
+  handleChangeStep(...props) {
+    const args = props[0];
+    console.log(props);
+    const send = args.send ? args.send : this.state.sendData;
+    const data = args.data ? args.data : this.state.allFinishedItemsData;
+    const color = args.color ? args.color : this.state.sessionColor;
+    const age = args.age ? args.age : this.state.participantAge;
+    const gender = args.gender ? args.gender : this.state.participantGender;
+    const device = args.device ? args.device : this.state.participantDevice;
+    const items = args.items ? args.items : this.state.onlinePurchasingFrequency;
     this.setState({
       step: this.state.step + 1,
-    });
+      sendData: send,
+      allFinishedItemsData: data,
+      sessionColor: color,
+      participantAge: age,
+      participantGender: gender,
+      participantDevice: device,
+      onlinePurchasingFrequency: items,
+    },
+    () => console.log(this.state)
+    );
   }
+
   render() {
     const { step } = this.state;
 
@@ -41,9 +72,9 @@ export class Experiment extends React.PureComponent {
         case 2:
           return <ItemList handleChangeStep={this.handleChangeStep} />;
         case 3:
-          return <AuthenticityCheck handleChangeStep={this.handleChangeStep} />;
-        case 4:
           return <Survey handleChangeStep={this.handleChangeStep} />;
+        case 4:
+          return <AuthenticityCheck handleChangeStep={this.handleChangeStep} />;
         case 5:
           return <ThankYou />;
         default:

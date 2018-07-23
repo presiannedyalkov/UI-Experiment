@@ -34,4 +34,14 @@ injectGlobal`
   .btn {
     font-size: 1rem;
   }
+
+  .row > .panel {
+    margin-top: -3rem;
+    padding: 3rem 5rem;
+  }
+  @media only screen and (max-width: 768px) {
+    .row > .panel {
+      padding: 3rem 2rem;
+    }
+  }
 `;

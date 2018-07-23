@@ -2,10 +2,6 @@
   float: right;
   margin-right: 1rem;
 }
-:local(.panel) {
-  margin-top: -3rem;
-  padding: 3rem 5rem;
-}
 :local(.panelBody) {
   display: flex;
   flex-wrap: wrap;

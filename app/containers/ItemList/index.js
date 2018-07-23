@@ -150,6 +150,9 @@ class ItemList extends React.PureComponent {
       finishedItemsPerPage: 0,
       currentPage: this.state.currentPage + 1,
     });
+    if (this.state.isLastPage) {
+      this.props.handleChangeStep({ send: false, data: this.state.finishedItemsData, color: this.state.color });
+    }
   }
 
   // this fetches the data after the user has finished with an item
@@ -170,19 +173,18 @@ class ItemList extends React.PureComponent {
   }
 
   render() {
-    const { currentItems, currentActionHierarchy, currentVisualHierarchy, currentPage, isLastPage, buttonIsShown, color } = this.state;
-    const handleChangeStep = this.props.handleChangeStep;
+    const { currentItems, currentActionHierarchy, currentVisualHierarchy, currentPage, buttonIsShown, color } = this.state;
 
     const renderItems = currentItems.map((item) => <Item handleFinishWithItem={this.handleFinishWithItem} key={item.id} id={item.id} text={item.text} category={item.category} buttonColor={color} currentActionHierarchy={currentActionHierarchy} currentVisualHierarchy={currentVisualHierarchy} page={currentPage} />);
 
     return (
-      <Panel className={styles.panel}>
+      <Panel className="panel">
         <Panel.Body className={styles.panelBody}>
           {renderItems}
         </Panel.Body>
         <Panel.Body>
           <div className="clearfix">
-            <Button className={`btn-secondary pull-right ${styles.button} ${!buttonIsShown ? 'invisible' : ''}`} onClick={isLastPage ? handleChangeStep : this.changePage} href="">Next</Button>
+            <Button className={`btn-secondary pull-right ${styles.button} ${!buttonIsShown ? 'invisible' : ''}`} onClick={this.changePage} href="">Next</Button>
           </div>
         </Panel.Body>
       </Panel>

@@ -6,3 +6,7 @@
   flex-direction: column;
   justify-content: center;
 }
+:local(.checkMark) {
+  fill: grey;
+  width: 3rem;
+}

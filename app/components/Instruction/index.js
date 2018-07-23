@@ -17,7 +17,7 @@ import styles from './Instruction.css';
 function Instruction(props) {
   const handleChangeStep = props.handleChangeStep;
   return (
-    <Panel className={styles.panel}>
+    <Panel className="panel">
       <Panel.Body>
         <Panel.Title><h2>Instructions</h2></Panel.Title>
       </Panel.Body>
