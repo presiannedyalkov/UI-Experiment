@@ -159,10 +159,10 @@ class ItemList extends React.PureComponent {
   handleFinishWithItem(finishedItem) {
     const lastFinishedItem = {
       id: finishedItem.id,
-      text: finishedItem.text,
-      category: finishedItem.category,
       visualTypeValue: finishedItem.visualTypeValue,
+      visualHierarchy: finishedItem.visualHierarchy,
       actionTypeValue: finishedItem.actionTypeValue,
+      actionHierarchy: finishedItem.actionHierarchy,
       scaleValue: finishedItem.scaleValue,
     };
     this.setState({

@@ -24,10 +24,6 @@ class AuthenticityCheck extends React.Component {
     this.handleRadioClick = this.handleRadioClick.bind(this);
   }
 
-  componentDidUpdate() {
-    console.log(this.state);
-  }
-
   handleRadioClick(authentic) {
     this.setState({
       buttonIsShown: true,

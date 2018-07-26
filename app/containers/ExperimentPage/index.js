@@ -15,16 +15,16 @@ import ItemList from 'containers/ItemList';
 import AuthenticityCheck from 'components/AuthenticityCheck';
 import Survey from 'components/Survey';
 import ThankYou from 'components/ThankYou';
+import Statistics from 'components/Statistics';
 
-// import Statistics from 'components/Statistics';
-
-export class Experiment extends React.PureComponent {
+class Experiment extends React.PureComponent {
   constructor() {
     super();
     this.state = {
       step: 1,
       sessionColor: '',
-      allFinishedItemsData: [],
+      sessionId: null,
+      allFinishedItemsData: {},
       participantAge: null,
       participantGender: '',
       participantDevice: '',
@@ -32,40 +32,43 @@ export class Experiment extends React.PureComponent {
       sendData: false,
     };
     this.handleChangeStep = this.handleChangeStep.bind(this);
+    this.uniqueId = this.uniqueId.bind(this);
+    this.serialize = this.serialize.bind(this);
   }
 
-  componentDidUpdate() {
-    if (this.state.sendData === true) {
-    //  console.log(this.state);
-    }
+  // Change 0x10 and the substring values for longer/shorter id
+  uniqueId() {
+    return parseInt(Math.floor((1 + Math.random()) * 0x1000000000).toString().substring(1, 9), 10);
   }
 
-  handleChangeStep(...props) {
-    const args = props[0];
-    console.log(props);
-    const send = args.send ? args.send : this.state.sendData;
-    const data = args.data ? args.data : this.state.allFinishedItemsData;
-    const color = args.color ? args.color : this.state.sessionColor;
-    const age = args.age ? args.age : this.state.participantAge;
-    const gender = args.gender ? args.gender : this.state.participantGender;
-    const device = args.device ? args.device : this.state.participantDevice;
-    const items = args.items ? args.items : this.state.onlinePurchasingFrequency;
+  handleChangeStep(props) {
+    const { send, data, color, age, gender, device, frequency } = props;
     this.setState({
       step: this.state.step + 1,
-      sendData: send,
-      allFinishedItemsData: data,
-      sessionColor: color,
-      participantAge: age,
-      participantGender: gender,
-      participantDevice: device,
-      onlinePurchasingFrequency: items,
-    },
-    () => console.log(this.state)
-    );
+      sendData: send || this.state.sendData,
+      allFinishedItemsData: data ? this.serialize(data) : this.state.allFinishedItemsData,
+      sessionColor: color || this.state.sessionColor,
+      sessionId: this.uniqueId(),
+      participantAge: age || this.state.participantAge,
+      participantGender: gender || this.state.participantGender,
+      participantDevice: device || this.state.participantDevice,
+      onlinePurchasingFrequency: frequency || this.state.onlinePurchasingFrequency,
+    });
+  }
+
+  serialize(array) {
+    const object = array.reduce((acc, curr, i) => {
+      const accumulator = acc;
+      const currentValue = curr;
+      accumulator[i] = currentValue;
+      return accumulator;
+    }, {});
+    const serializedData = JSON.stringify(object);
+    return serializedData;
   }
 
   render() {
-    const { step } = this.state;
+    const { step, sendData } = this.state;
 
     const Page = (currentStep) => {
       switch (currentStep) {
@@ -87,6 +90,7 @@ export class Experiment extends React.PureComponent {
         <Header />
         <Grid>
           <Row>
+            {sendData ? <Statistics {...this.state} /> : null}
             {Page(step)}
           </Row>
         </Grid>

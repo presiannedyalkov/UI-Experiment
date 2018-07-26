@@ -25,8 +25,8 @@ class Survey extends React.PureComponent {
       genderIsValid: false,
       device: isBrowser ? 'desktop' : 'mobile',
       deviceIsValid: true,
-      items: null,
-      itemsIsValid: false,
+      frequency: null,
+      frequencyIsValid: false,
       buttonIsShown: false,
     };
 
@@ -36,13 +36,12 @@ class Survey extends React.PureComponent {
   }
 
   componentDidUpdate() {
-    const { ageIsValid, genderIsValid, deviceIsValid, itemsIsValid } = this.state;
-    if (ageIsValid && genderIsValid && deviceIsValid && itemsIsValid) {
+    const { ageIsValid, genderIsValid, deviceIsValid, frequencyIsValid } = this.state;
+    if (ageIsValid && genderIsValid && deviceIsValid && frequencyIsValid) {
       this.setState({ buttonIsShown: true }); // eslint-disable-line react/no-did-update-set-state
     } else {
       this.setState({ buttonIsShown: false }); // eslint-disable-line react/no-did-update-set-state
     }
-    console.log(this.state);
   }
 
   getValidationState(field) {
@@ -70,19 +69,19 @@ class Survey extends React.PureComponent {
       if (device) return 'success';
       return null;
     }
-    if (field === 'items') {
-      const { items } = this.state;
-      if (items === 0) {
-        this.setState({ itemsIsValid: true });
+    if (field === 'frequency') {
+      const { frequency } = this.state;
+      if (frequency === 0) {
+        this.setState({ frequencyIsValid: true });
         return 'success';
-      } else if (items > 0 && items <= 100) {
-        this.setState({ itemsIsValid: true });
+      } else if (frequency > 0 && frequency <= 100) {
+        this.setState({ frequencyIsValid: true });
         return 'success';
-      } else if (isNaN(items)) {
-        this.setState({ itemsIsValid: false });
+      } else if (isNaN(frequency)) {
+        this.setState({ frequencyIsValid: false });
         return 'error';
-      } else if (items < 0 || items >= 100) {
-        this.setState({ itemsIsValid: false });
+      } else if (frequency < 0 || frequency >= 100) {
+        this.setState({ frequencyIsValid: false });
         return 'error';
       }
       return null;
@@ -99,17 +98,16 @@ class Survey extends React.PureComponent {
       this.setState({ gender: value });
     } else if (currentField === 'device') {
       this.setState({ device: value });
-    } else if (currentField === 'items') {
-      this.setState({ items: parseInt(value, 10) });
+    } else if (currentField === 'frequency') {
+      this.setState({ frequency: parseInt(value, 10) });
     }
   }
 
   // This changes the items on the page and controls the button
   changePage() {
-    const { age, gender, device, items } = this.state;
-    this.props.handleChangeStep({ age, gender, device, items });
+    const { age, gender, device, frequency } = this.state;
+    this.props.handleChangeStep({ age, gender, device, frequency });
   }
-
 
   render() {
     const { buttonIsShown } = this.state;
@@ -145,9 +143,9 @@ class Survey extends React.PureComponent {
               </FormControl>
               <HelpBlock>Please choose one of the options.</HelpBlock>
             </FormGroup>
-            <FormGroup validationState={this.getValidationState('items')}>
-              <ControlLabel htmlFor="items">How many items did you buy online in the last 3 months</ControlLabel>
-              <FormControl name="items" id="items" type="number" min="0" max="100" placeholder="Number of items" onChange={this.handleChange} />
+            <FormGroup validationState={this.getValidationState('frequency')}>
+              <ControlLabel htmlFor="frequency">How many items did you buy online in the last 3 months</ControlLabel>
+              <FormControl name="frequency" id="frequency" type="number" min="0" max="100" placeholder="Number of items" onChange={this.handleChange} />
               <HelpBlock>Please choose between 0 and 100 items. Exclude bulk purchases like groceries.</HelpBlock>
             </FormGroup>
           </form>

@@ -15,20 +15,20 @@ import Button from 'components/Button';
 import styles from './ButtonGroup.css';
 
 function ButtonGroup(props) {
-  const { currentActionHierarchy, currentVisualHierarchy, buttonColor, handleButtonClick } = props;
+  const { currentVisualHierarchy, currentActionHierarchy, buttonColor, handleButtonClick } = props;
 
   return (
     <div className={styles.buttonContainer}>
-      <Button handleButtonClick={handleButtonClick} visualType={currentVisualHierarchy.primaryAction} actionType={currentActionHierarchy.primaryAction} color={buttonColor}>{currentActionHierarchy.primaryAction}</Button>
-      <Button handleButtonClick={handleButtonClick} visualType={currentVisualHierarchy.secondaryAction} actionType={currentActionHierarchy.secondaryAction} color={buttonColor}>{currentActionHierarchy.secondaryAction}</Button>
-      <Button handleButtonClick={handleButtonClick} visualType={currentVisualHierarchy.tertiaryAction} actionType={currentActionHierarchy.tertiaryAction} color={buttonColor}>{currentActionHierarchy.tertiaryAction}</Button>
+      <Button handleButtonClick={handleButtonClick} visualHierarchy={currentVisualHierarchy.id} visualType={currentVisualHierarchy.primaryAction} actionHierarchy={currentActionHierarchy.id} actionType={currentActionHierarchy.primaryAction} color={buttonColor}>{currentActionHierarchy.primaryAction}</Button>
+      <Button handleButtonClick={handleButtonClick} visualHierarchy={currentVisualHierarchy.id} visualType={currentVisualHierarchy.secondaryAction} actionHierarchy={currentActionHierarchy.id} actionType={currentActionHierarchy.secondaryAction} color={buttonColor}>{currentActionHierarchy.secondaryAction}</Button>
+      <Button handleButtonClick={handleButtonClick} visualHierarchy={currentVisualHierarchy.id} visualType={currentVisualHierarchy.tertiaryAction} actionHierarchy={currentActionHierarchy.id} actionType={currentActionHierarchy.tertiaryAction} color={buttonColor}>{currentActionHierarchy.tertiaryAction}</Button>
     </div>
   );
 }
 
 ButtonGroup.propTypes = {
-  currentActionHierarchy: PropTypes.object,
   currentVisualHierarchy: PropTypes.object,
+  currentActionHierarchy: PropTypes.object,
   buttonColor: PropTypes.string,
   handleButtonClick: PropTypes.func,
 };

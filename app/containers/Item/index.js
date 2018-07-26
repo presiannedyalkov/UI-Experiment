@@ -23,7 +23,9 @@ class Item extends React.Component {
       text: props.text,
       category: props.category,
       buttonIsClicked: false,
+      visualHierarchy: null,
       visualTypeValue: '',
+      actionHierachy: '',
       actionTypeValue: '',
       scaleIsClicked: false,
       scaleValue: 0,
@@ -35,7 +37,9 @@ class Item extends React.Component {
   handleButtonClick(event) {
     this.setState({
       buttonIsClicked: true,
+      visualHierarchy: parseInt(event.currentTarget.dataset.visualHierarchy, 10),
       visualTypeValue: event.currentTarget.dataset.visualType,
+      actionHierarchy: parseInt(event.currentTarget.dataset.actionHierarchy, 10),
       actionTypeValue: event.currentTarget.dataset.actionType,
     });
   }
