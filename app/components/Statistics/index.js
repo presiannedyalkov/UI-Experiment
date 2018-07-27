@@ -30,7 +30,7 @@ export class Statistics extends React.Component {
   }
 
   componentWillMount() {
-    axios.post('http://localhost:3000/api/sessions', {
+    axios.post('https://session-express-server.herokuapp.com/api/sessions', {
       sessionId: this.state.sessionId,
       sessionColor: this.state.sessionColor,
       allFinishedItemsData: this.state.allFinishedItemsData,
@@ -50,7 +50,6 @@ export class Statistics extends React.Component {
   render() {
     const Status = () => {
       const status = this.state.status;
-      console.log('status: ', status);
       if (status === 'error') {
         return <i>An error ocurred</i>;
       } else if (status === 'sent') {

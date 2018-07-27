@@ -29,15 +29,12 @@ class ThankYou extends React.Component {
 
   componentDidUpdate() {
     const { name, nameIsValid, email, emailIsValid, buttonIsClicked, sent } = this.state;
-    console.log(this.state);
     if (nameIsValid && emailIsValid && buttonIsClicked && !sent) {
-      axios.post('http://localhost:3000/api/mail', { name, email })
+      axios.post('https://session-express-server.herokuapp.com/api/mail', { name, email })
         .then(() => {
-          console.log('sent');
           this.setState({ status: 'sent', sent: true });
         })
         .catch(() => {
-          console.log('error');
           this.setState({ status: 'error', sent: true });
         });
     }
@@ -51,7 +48,6 @@ class ThankYou extends React.Component {
     // check if its a name
     const nameCheck = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
     const validName = nameCheck.test(name);
-    console.log(validName);
     if (name && validName) {
       this.setState({ nameIsValid: true });
     } else {
@@ -60,7 +56,6 @@ class ThankYou extends React.Component {
 
     const emailCheck = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const validEmail = emailCheck.test(email);
-    console.log(validEmail);
     if (email && validEmail) {
       this.setState({ emailIsValid: true });
     } else {
@@ -79,6 +74,7 @@ class ThankYou extends React.Component {
   }
 
   render() {
+    const { name, nameIsValid, email, emailIsValid, buttonIsClicked, sent } = this.state;
     return (
       <Panel className="panel">
         <Panel.Body>
@@ -104,14 +100,14 @@ class ThankYou extends React.Component {
           about the project, please fill out the form and click send. We
           will contact you in a couple of weeks when the experiment is concluded.<br /><br />
 
-          <Form inline className={this.state.sent ? 'hidden' : ''}>
-            <FormGroup>
+          <Form inline className={sent ? 'hidden' : ''}>
+            <FormGroup validationState={(!nameIsValid && buttonIsClicked) ? 'error' : null}>
               <ControlLabel>Name</ControlLabel>{' '}
-              <FormControl name="name" id="name" type="text" placeholder="J. Doe" value={this.state.name} onChange={this.handleChange} />
+              <FormControl name="name" id="name" type="text" placeholder="J. Doe" value={name} onChange={this.handleChange} />
             </FormGroup>{' '}
-            <FormGroup>
+            <FormGroup validationState={(!emailIsValid && buttonIsClicked) ? 'error' : null}>
               <ControlLabel>Email</ControlLabel>{' '}
-              <FormControl name="email" id="email" type="email" placeholder="j.doe@example.com" value={this.state.email} onChange={this.handleChange} />
+              <FormControl name="email" id="email" type="email" placeholder="j.doe@example.com" value={email} onChange={this.handleChange} />
             </FormGroup>{' '}
             <Button onClick={this.handleEmailSubscription}>Send</Button>
           </Form>

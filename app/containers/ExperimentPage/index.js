@@ -13,8 +13,8 @@ import Header from 'components/Header';
 import Instruction from 'components/Instruction';
 import ItemList from 'containers/ItemList';
 import AuthenticityCheck from 'components/AuthenticityCheck';
-import Survey from 'components/Survey';
-import ThankYou from 'components/ThankYou';
+import Survey from 'containers/Survey';
+import ThankYou from 'containers/ThankYou';
 import Statistics from 'components/Statistics';
 
 class Experiment extends React.PureComponent {
@@ -38,7 +38,7 @@ class Experiment extends React.PureComponent {
 
   // Change 0x10 and the substring values for longer/shorter id
   uniqueId() {
-    return parseInt(Math.floor((1 + Math.random()) * 0x1000000000).toString().substring(1, 9), 10);
+    return parseInt(Math.floor((1 + Math.random()) * 0x1000000000).toString().slice(-8), 10);
   }
 
   handleChangeStep(props) {
