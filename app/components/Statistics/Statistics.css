@@ -3,7 +3,34 @@
   top: 3rem;
   left: 50%;
   color: white;
-  width: 10rem;
-  margin-left: -5rem;
+  width: 16rem;
+  margin-left: -8rem;
   text-align: center;
+}
+:local(.iconError):before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../../images/error.svg") no-repeat;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.75rem;
+}
+:local(.iconDone):before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../../images/done.svg") no-repeat;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.75rem;
+}
+:local(.iconUploading):before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../../images/uploading.svg") no-repeat;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.75rem;
 }

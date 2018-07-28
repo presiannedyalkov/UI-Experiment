@@ -51,11 +51,11 @@ export class Statistics extends React.Component {
     const Status = () => {
       const status = this.state.status;
       if (status === 'error') {
-        return <i>An error ocurred</i>;
+        return <i className={styles.iconError}>An error ocurred</i>;
       } else if (status === 'sent') {
-        return <i>Data is sent</i>;
+        return <i className={styles.iconDone}>Data is sent</i>;
       }
-      return <i>Sending data...</i>;
+      return <i className={styles.iconUploading}>Sending data...</i>;
     };
     return (
       <div className={styles.container}>

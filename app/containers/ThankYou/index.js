@@ -82,8 +82,8 @@ class ThankYou extends React.Component {
         </Panel.Body>
         <Panel.Body>
           <h4>Dear Participant,</h4>
-          you have reached the end of our survey. Your data has been sent.
-          You may close the window now. Thank you for being part of our research project!<br /><br />
+          you have reached the end of our survey. Please wait untill the data is sent.
+          You may then close the window. Thank you for being part of our research project!<br /><br />
 
           <strong>About the experiment</strong><br />
           The questions we are trying to answer by conducting this survey are the following:<br />

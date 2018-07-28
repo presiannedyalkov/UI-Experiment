@@ -54,7 +54,7 @@ class Item extends React.Component {
 
   render() {
     return (
-      <Col sm={6} md={4} className={styles.col}>
+      <Col xs={12} sm={6} md={4} className={styles.col}>
         <Panel className="text-center">
           <div className={styles.titleContainer}>
             <Panel.Title className={styles.itemTitle}>{this.state.text}</Panel.Title>

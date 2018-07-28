@@ -41,7 +41,7 @@ injectGlobal`
   }
   @media only screen and (max-width: 768px) {
     .row > .panel {
-      padding: 3rem 2rem;
+      padding: 3rem 1rem;
     }
   }
 `;

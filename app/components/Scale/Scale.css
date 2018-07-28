@@ -5,8 +5,7 @@
   flex-flow: column;
 }
 :local(.formgroupScale) {
-  margin: 0 1rem;
-  padding: 0;
+  padding: 0 1rem;
   display: flex;
   flex-flow: row;
   justify-content: center;
