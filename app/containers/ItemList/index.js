@@ -46,7 +46,7 @@ class ItemList extends React.PureComponent {
       currentActionHierarchy: '',
       currentVisualHierarchy: '',
       currentPage: 1,
-      itemsPerPage: 1,
+      itemsPerPage: 6,
       isLastPage: false,
       buttonIsShown: false,
       itemsAreShown: true,
