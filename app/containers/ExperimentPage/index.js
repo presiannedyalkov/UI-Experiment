@@ -77,7 +77,7 @@ class Experiment extends React.PureComponent {
 
     const Page = (currentStep) => {
       switch (currentStep) {
-        case 2:
+        case 1:
           return <ItemList handleChangeStep={this.handleChangeStep} />;
         case 3:
           return <Survey handleChangeStep={this.handleChangeStep} />;
