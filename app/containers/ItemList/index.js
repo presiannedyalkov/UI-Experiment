@@ -153,6 +153,7 @@ class ItemList extends React.PureComponent {
     if (this.state.isLastPage) {
       this.props.handleChangeStep({ send: false, data: this.state.finishedItemsData, color: this.state.color });
     }
+    window.scrollTo(0, 0);
   }
 
   // this fetches the data after the user has finished with an item
