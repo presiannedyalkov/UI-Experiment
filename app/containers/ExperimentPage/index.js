@@ -38,7 +38,12 @@ class Experiment extends React.PureComponent {
 
   // Change 0x10 and the substring values for longer/shorter id
   uniqueId() {
-    return parseInt(Math.floor((1 + Math.random()) * 0x1000000000).toString().slice(-8), 10);
+    const createRandomUUID = () => parseInt(Math.floor((1 + Math.random()) * 0x1000000000).toString().slice(-8), 10);
+    let uuid = createRandomUUID();
+    if (uuid.toString().length < 8) {
+      uuid = createRandomUUID();
+    }
+    return uuid;
   }
 
   handleChangeStep(props) {
@@ -48,7 +53,7 @@ class Experiment extends React.PureComponent {
       sendData: send || this.state.sendData,
       allFinishedItemsData: data ? this.serialize(data) : this.state.allFinishedItemsData,
       sessionColor: color || this.state.sessionColor,
-      sessionId: this.uniqueId(),
+      sessionId: this.state.sessionId || this.uniqueId(),
       participantAge: age || this.state.participantAge,
       participantGender: gender || this.state.participantGender,
       participantDevice: device || this.state.participantDevice,
