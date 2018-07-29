@@ -28,7 +28,7 @@ function Introduction() {
               <h4>Dear Participant,</h4>
 
               we are pleased, that you are interested in taking part in our brief survey on purchase decisions.
-              The completion of the experiment takes an average of <strong>5 minutes.</strong><br />
+              The completion of the experiment takes about <strong>5-10 minutes, please take your time.</strong><br />
 
               Please read the following information carefully and decide whether you are willing to contribute to our
               research project by taking part in our survey.<br /><br />

@@ -27,9 +27,9 @@ function Scale(props) {
   });
 
   return (
-    <form>
+    <form className={props.className}>
       <FormGroup bsClass={styles.formgroupContainer}>
-        <legend>How likely are you to purchase this item in the next 6 months?</legend>
+        <legend>Would you buy this item in the next 3 months in real life?</legend>
         <FormGroup bsClass={styles.formgroupScale}>
           {scaleInput}
         </FormGroup>
@@ -40,6 +40,7 @@ function Scale(props) {
 
 Scale.propTypes = {
   handleScaleClick: PropTypes.func,
+  className: PropTypes.string,
 };
 
 export default Scale;

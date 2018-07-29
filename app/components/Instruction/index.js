@@ -10,6 +10,7 @@ import PropTypes from 'prop-types';
 
 // Components
 import { Button, Panel } from 'react-bootstrap';
+import Scale from 'components/Scale';
 
 // Styles
 import styles from './Instruction.css';
@@ -23,11 +24,12 @@ function Instruction(props) {
       </Panel.Body>
       <Panel.Body>
         Under each item you will find three buttons corresponding to three different
-        actions &mdash; you can <strong>&quot;Buy&quot;</strong> an item, <strong>&quot;Add&quot;</strong> it to a wish list
-        for later purchase, or if you are not interested in the item and choose none of the above you can <strong>&quot;Skip&quot;</strong>.
-        Please indicate for each of the following items how likely you are to purchase the item
-        by choosing the adequate value on a scale ranging from <strong>very unlikely</strong> to <strong>very
-        likely</strong>, regardless of the button you have clicked.<br /><br />
+        actions &mdash; you can <Button>Buy</Button> an item, <Button>Add</Button> it to a wish list
+        if you would by it later, or if you are not interested in the item you just <Button>Skip</Button> it.<br /><br />
+
+        After you click on a button, you are presented with another choice:
+        <Scale className={styles.scale} />
+
         Please answer all questions truthfully and as spontaneously as possible.
       </Panel.Body>
       <div className="clearfix">
