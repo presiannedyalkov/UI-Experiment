@@ -4,7 +4,7 @@
   "description": "UI Experiment",
   "repository": {
     "type": "git",
-    "url": "https://github.com/presiannedyalkov/Wishlist-App.git"
+    "url": "https://github.com/presiannedyalkov/UI-Experiment"
   },
   "engines": {
     "npm": ">=3",
