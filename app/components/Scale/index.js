@@ -29,7 +29,7 @@ function Scale(props) {
   return (
     <form className={props.className}>
       <FormGroup bsClass={styles.formgroupContainer}>
-        <legend>Would you buy this item in the next 3 months in real life?</legend>
+        <legend>How likely are you to buy this item within the next 3 months in real life?</legend>
         <FormGroup bsClass={styles.formgroupScale}>
           {scaleInput}
         </FormGroup>

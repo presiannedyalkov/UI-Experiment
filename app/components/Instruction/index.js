@@ -25,7 +25,7 @@ function Instruction(props) {
       <Panel.Body>
         Under each item you will find three buttons corresponding to three different
         actions &mdash; you can <Button>Buy</Button> an item, <Button>Add</Button> it to a wish list
-        if you would by it later, or if you are not interested in the item you just <Button>Skip</Button> it.<br /><br />
+        to save it for a possible later purchase, or if you are not interested in the item you just <Button>Skip</Button> it.<br /><br />
 
         After you click on a button, you are presented with another choice:
         <Scale className={styles.scale} />
