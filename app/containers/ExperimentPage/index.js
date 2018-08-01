@@ -14,7 +14,6 @@ import Instruction from 'components/Instruction';
 import ItemList from 'containers/ItemList';
 import AuthenticityCheck from 'components/AuthenticityCheck';
 import Survey from 'containers/Survey';
-import ThankYou from 'containers/ThankYou';
 import Statistics from 'components/Statistics';
 
 class Experiment extends React.PureComponent {
@@ -29,7 +28,6 @@ class Experiment extends React.PureComponent {
       participantGender: '',
       participantDevice: '',
       onlinePurchasingFrequency: null,
-      sendData: false,
     };
     this.handleChangeStep = this.handleChangeStep.bind(this);
     this.uniqueId = this.uniqueId.bind(this);
@@ -47,10 +45,9 @@ class Experiment extends React.PureComponent {
   }
 
   handleChangeStep(props) {
-    const { send, data, color, age, gender, device, frequency } = props;
+    const { data, color, age, gender, device, frequency } = props;
     this.setState({
       step: this.state.step + 1,
-      sendData: send || this.state.sendData,
       allFinishedItemsData: data ? this.serialize(data) : this.state.allFinishedItemsData,
       sessionColor: color || this.state.sessionColor,
       sessionId: this.state.sessionId || this.uniqueId(),
@@ -73,7 +70,7 @@ class Experiment extends React.PureComponent {
   }
 
   render() {
-    const { step, sendData } = this.state;
+    const { step } = this.state;
 
     const Page = (currentStep) => {
       switch (currentStep) {
@@ -84,7 +81,7 @@ class Experiment extends React.PureComponent {
         case 4:
           return <AuthenticityCheck handleChangeStep={this.handleChangeStep} />;
         case 5:
-          return <ThankYou />;
+          return <Statistics {...this.state} />;
         default:
           return <Instruction handleChangeStep={this.handleChangeStep} />;
       }
@@ -95,7 +92,6 @@ class Experiment extends React.PureComponent {
         <Header />
         <Grid>
           <Row>
-            {sendData ? <Statistics {...this.state} /> : null}
             {Page(step)}
           </Row>
         </Grid>

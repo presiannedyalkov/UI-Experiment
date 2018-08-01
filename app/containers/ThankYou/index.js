@@ -9,7 +9,8 @@ import React from 'react';
 import axios from 'axios';
 
 // Components
-import { Panel, Form, FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
+import { Panel, Form, FormGroup, ControlLabel, FormControl, Button, Grid, Row } from 'react-bootstrap';
+import Header from 'components/Header';
 
 class ThankYou extends React.Component {
   constructor() {
@@ -76,43 +77,50 @@ class ThankYou extends React.Component {
   render() {
     const { name, nameIsValid, email, emailIsValid, buttonIsClicked, sent } = this.state;
     return (
-      <Panel className="panel">
-        <Panel.Body>
-          <Panel.Title><h2>Final words</h2></Panel.Title>
-        </Panel.Body>
-        <Panel.Body>
-          <h4>Dear Participant,</h4>
-          you have reached the end of our survey. Please wait untill the data is sent.
-          You may then close the window. Thank you for being part of our research project!<br /><br />
+      <div>
+        <Header />
+        <Grid>
+          <Row>
+            <Panel className="panel">
+              <Panel.Body>
+                <Panel.Title><h2>Final words</h2></Panel.Title>
+              </Panel.Body>
+              <Panel.Body>
+                <h4>Dear Participant,</h4>
+                you have reached the end of our survey. Please wait until the data is sent.
+                You may then close the window. Thank you for being part of our research project!<br /><br />
 
-          <strong>About the experiment</strong><br />
-          The questions we are trying to answer by conducting this survey are the following:<br />
-          <ol>
-            <li>Are people more likely to click buttons of a certain color and/or shape?</li>
-            <li>Is there a specific relationship between the color and/or shape of the
-              button clicked and the subjective probability to buy an item?</li>
-          </ol><br />
+                <strong>About the experiment</strong><br />
+                The questions we are trying to answer by conducting this survey are the following:<br />
+                <ol>
+                  <li>Are people more likely to click buttons of a certain color and/or shape?</li>
+                  <li>Is there a specific relationship between the color and/or shape of the
+                    button clicked and the subjective probability to buy an item?</li>
+                </ol><br />
 
-          <strong>Contact</strong><br />
-          In case of any further questions concerning this survey or if you found a bug please contact <a href="mailto:info@ui-experiment.koeln">
-          info@ui-experiment.koeln</a>.<br /><br />
-          If you would like to receive the final results and/or view more documentation
-          about the project, please fill out the form and click send. We
-          will contact you in a couple of weeks when the experiment is concluded.<br /><br />
+                <strong>Contact</strong><br />
+                In case of any further questions concerning this survey or if you found a bug please contact <a href="mailto:info@ui-experiment.koeln">
+                info@ui-experiment.koeln</a>.<br /><br />
+                If you would like to receive the final results and/or view more documentation
+                about the project, please fill out the form and click send. We
+                will contact you in a couple of weeks when the experiment is concluded.<br /><br />
 
-          <Form inline className={sent ? 'hidden' : ''}>
-            <FormGroup validationState={(!nameIsValid && buttonIsClicked) ? 'error' : null}>
-              <ControlLabel>Name</ControlLabel>{' '}
-              <FormControl name="name" id="name" type="text" placeholder="J. Doe" value={name} onChange={this.handleChange} />
-            </FormGroup>{' '}
-            <FormGroup validationState={(!emailIsValid && buttonIsClicked) ? 'error' : null}>
-              <ControlLabel>Email</ControlLabel>{' '}
-              <FormControl name="email" id="email" type="email" placeholder="j.doe@example.com" value={email} onChange={this.handleChange} />
-            </FormGroup>{' '}
-            <Button onClick={this.handleEmailSubscription}>Send</Button>
-          </Form>
-        </Panel.Body>
-      </Panel>
+                <Form inline className={sent ? 'hidden' : ''}>
+                  <FormGroup validationState={(!nameIsValid && buttonIsClicked) ? 'error' : null}>
+                    <ControlLabel>Name</ControlLabel>{' '}
+                    <FormControl name="name" id="name" type="text" placeholder="J. Doe" value={name} onChange={this.handleChange} />
+                  </FormGroup>{' '}
+                  <FormGroup validationState={(!emailIsValid && buttonIsClicked) ? 'error' : null}>
+                    <ControlLabel>Email</ControlLabel>{' '}
+                    <FormControl name="email" id="email" type="email" placeholder="j.doe@example.com" value={email} onChange={this.handleChange} />
+                  </FormGroup>{' '}
+                  <Button onClick={this.handleEmailSubscription}>Send</Button>
+                </Form>
+              </Panel.Body>
+            </Panel>
+          </Row>
+        </Grid>
+      </div>
     );
   }
 }

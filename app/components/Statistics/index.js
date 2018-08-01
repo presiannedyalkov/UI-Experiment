@@ -30,6 +30,7 @@ export class Statistics extends React.Component {
   }
 
   componentWillMount() {
+    console.log('sending data');
     axios.post('https://session-express-server.herokuapp.com/api/sessions', {
       sessionId: this.state.sessionId,
       sessionColor: this.state.sessionColor,
@@ -41,9 +42,11 @@ export class Statistics extends React.Component {
     })
       .then(() => {
         this.setState({ status: 'sent' });
+        window.location.replace('/thankyou');
       })
       .catch(() => {
         this.setState({ status: 'error' });
+        window.location.replace('/thankyou');
       });
   }
 
