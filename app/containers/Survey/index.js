@@ -127,7 +127,7 @@ class Survey extends React.PureComponent {
             <FormGroup validationState={this.getValidationState('gender')}>
               <ControlLabel>Gender</ControlLabel>
               <FormControl name="gender" id="gender" componentClass="select" placeholder="select" value={this.state.gender} onChange={this.handleChange} >
-                <option disabled value=""></option>
+                <option disabled value="">Select</option>
                 <option value="male">male</option>
                 <option value="female">female</option>
                 <option value="other">other</option>
@@ -144,7 +144,7 @@ class Survey extends React.PureComponent {
               <HelpBlock>Please choose one of the options.</HelpBlock>
             </FormGroup>
             <FormGroup validationState={this.getValidationState('frequency')}>
-              <ControlLabel htmlFor="frequency">How many items did you buy online in the last 3 months</ControlLabel>
+              <ControlLabel htmlFor="frequency">Roughly estimated, how many items did you buy online in the last 3 months</ControlLabel>
               <FormControl name="frequency" id="frequency" type="number" min="0" max="100" placeholder="Number of items" onChange={this.handleChange} />
               <HelpBlock>Please choose between 0 and 100 items. Exclude bulk purchases like groceries.</HelpBlock>
             </FormGroup>

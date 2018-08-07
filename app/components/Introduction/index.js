@@ -28,7 +28,7 @@ function Introduction() {
               <h4>Dear Participant,</h4>
 
               we are pleased, that you are interested in taking part in our brief survey on purchase decisions.
-              The completion of the experiment takes an average of <strong>5 minutes.</strong><br />
+              The completion of the experiment takes about <strong>5-10 minutes, please take your time.</strong><br />
 
               Please read the following information carefully and decide whether you are willing to contribute to our
               research project by taking part in our survey.<br /><br />
@@ -49,7 +49,7 @@ function Introduction() {
               expenses on your side other than the time it will take you to answer the survey questions.<br /><br />
 
               <strong>Contact</strong><br />
-              In case of any further questions concerning this survey please contact <a href="mailto:info@ui-experiment.koeln">info@ui-experiment.koeln</a>.<br /><br />
+              In case of any further questions concerning this survey please contact <a href="mailto:info@ui-experiment.de" target="_blank">info@ui-experiment.de</a>.<br /><br />
 
               <strong>By proceeding to the following page you declare that you have read and understood all of the above
               and agree with the depicted terms and conditions.</strong>
