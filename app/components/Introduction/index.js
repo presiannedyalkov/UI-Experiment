@@ -49,7 +49,7 @@ function Introduction() {
               expenses on your side other than the time it will take you to answer the survey questions.<br /><br />
 
               <strong>Contact</strong><br />
-              In case of any further questions concerning this survey please contact <a href="mailto:info@ui-experiment.koeln">info@ui-experiment.koeln</a>.<br /><br />
+              In case of any further questions concerning this survey please contact <a href="mailto:info@ui-experiment.de" target="_blank">info@ui-experiment.de</a>.<br /><br />
 
               <strong>By proceeding to the following page you declare that you have read and understood all of the above
               and agree with the depicted terms and conditions.</strong>

@@ -14,8 +14,8 @@ import { Button, Panel } from 'react-bootstrap';
 import Item from 'containers/Item';
 
 // Data objects
-import items from 'data/Items';
-// import items from 'data/ItemsDemo';
+// import items from 'data/Items';
+import items from 'data/ItemsDemo';
 import buttonActionHierarchy from 'data/ButtonActionHierarchy';
 import buttonVisualHierarchy from 'data/ButtonVisualHierarchy';
 
@@ -46,7 +46,7 @@ class ItemList extends React.PureComponent {
       currentActionHierarchy: '',
       currentVisualHierarchy: '',
       currentPage: 1,
-      itemsPerPage: 6,
+      itemsPerPage: 1,
       isLastPage: false,
       buttonIsShown: false,
       itemsAreShown: true,

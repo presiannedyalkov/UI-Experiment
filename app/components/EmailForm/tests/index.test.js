@@ -1,9 +1,9 @@
 // import React from 'react';
 // import { shallow } from 'enzyme';
 
-// import NsThankYou from '../index';
+// import EmailForm from '../index';
 
-describe('<NsThankYou />', () => {
+describe('<EmailForm />', () => {
   it('Expect to have unit tests specified', () => {
     expect(true).toEqual(false);
   });

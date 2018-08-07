@@ -45,16 +45,13 @@ class AuthenticityCheck extends React.Component {
             <label htmlFor="authenticityCheck">Please click on the option that applies to you
               <FormGroup>
                 <Radio name="authenticityCheck" onClick={() => this.handleRadioClick(true)} readOnly>I have followed the instructions and my answers are sincere. My data should be submitted.</Radio>
-                <Radio name="authenticityCheck" onClick={() => this.handleRadioClick(false)} readOnly>I have not followed the instructions and my answers are not sincere. My data should <b>not</b> be submitted.</Radio>
+                <Radio name="authenticityCheck" onClick={() => this.handleRadioClick(false)} readOnly>I have <b>not</b> followed the instructions and my answers are <b>not</b> sincere. My data should <b>not</b> be submitted.</Radio>
               </FormGroup>
             </label>
           </form>
         </Panel.Body>
         <div className="clearfix">
-          {isAuthentic ?
-            <Button className={`btn-secondary ${styles.button} ${!buttonIsShown ? 'invisible' : ''}`} onClick={() => handleChangeStep({})} href="">Next</Button> :
-            <Button className={`btn-secondary ${styles.button} ${!buttonIsShown ? 'invisible' : ''}`} href="/nsThankYou">Next</Button>
-          }
+          <Button className={`btn-secondary ${styles.button} ${!buttonIsShown ? 'invisible' : ''}`} onClick={() => handleChangeStep({ send: isAuthentic, participated: true })} href="">Next</Button>
         </div>
       </Panel>
     );

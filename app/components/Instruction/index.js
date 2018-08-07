@@ -23,10 +23,10 @@ function Instruction(props) {
         <Panel.Title><h2>Instructions</h2></Panel.Title>
       </Panel.Body>
       <Panel.Body>
-        On the next page you will be presented with a total of 36 items divided into 6 pages. Under each item you
-        will find three buttons corresponding to three different actions &mdash; you can <Button>Buy</Button> an
-        item, <Button>Add</Button> it to a wish list to save it for a possible later purchase, or if you are not
-        interested in the item you just <Button>Skip</Button> it.<br /><br />
+        On the next page you will be presented with a total of 36 items divided into 6 pages. You have to decide what to
+        do with each item based on its description. Under each item you will find three buttons corresponding to three
+        different actions &mdash; you can <Button>Buy</Button> an item, <Button>Add</Button> it to a wish list to save
+        it for a possible later purchase, or if you are not interested in the item you just <Button>Skip</Button> it.<br /><br />
 
         After you click on a button, you are presented with another choice:
         <Scale className={styles.scale} />

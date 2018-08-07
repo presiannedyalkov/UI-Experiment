@@ -9,12 +9,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
-// Components
-
 // Styles
 import styles from './Statistics.css';
 
-export class Statistics extends React.Component {
+class Statistics extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,13 +23,13 @@ export class Statistics extends React.Component {
       participantGender: props.participantGender,
       participantDevice: props.participantDevice,
       onlinePurchasingFrequency: props.onlinePurchasingFrequency,
+      participated: props.participated,
       status: 'sending',
     };
   }
 
   componentWillMount() {
-    console.log('sending data');
-    axios.post('https://session-express-server.herokuapp.com/api/sessions', {
+    axios.post('https://sessions-express-server-2.herokuapp.com/api/sessions', {
       sessionId: this.state.sessionId,
       sessionColor: this.state.sessionColor,
       allFinishedItemsData: this.state.allFinishedItemsData,
@@ -42,11 +40,11 @@ export class Statistics extends React.Component {
     })
       .then(() => {
         this.setState({ status: 'sent' });
-        window.location.replace('/thankyou');
+        window.location.replace('/thankyou?sent=true');
       })
       .catch(() => {
         this.setState({ status: 'error' });
-        window.location.replace('/thankyou');
+        window.location.replace('/thankyou?error=true');
       });
   }
 
@@ -54,7 +52,7 @@ export class Statistics extends React.Component {
     const Status = () => {
       const status = this.state.status;
       if (status === 'error') {
-        return <i className={styles.iconError}>An error ocurred</i>;
+        return <i className={styles.iconError}>An error occurred</i>;
       } else if (status === 'sent') {
         return <i className={styles.iconDone}>Data is sent</i>;
       }
@@ -76,6 +74,7 @@ Statistics.propTypes = {
   participantGender: PropTypes.string,
   participantDevice: PropTypes.string,
   onlinePurchasingFrequency: PropTypes.number,
+  participated: PropTypes.bool,
 };
 
 export default Statistics;
