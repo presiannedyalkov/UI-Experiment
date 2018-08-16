@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="25" viewBox="0 0 35 25">
+<defs>
+    <style>
+      .cls-1 {
+        fill: #2f3640;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="0.625" y="1.688" width="34.156" height="22.281" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#2f3640"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="iCloud_up" data-name="iCloud up" class="cls-1" d="M13.126,7.433a4.086,4.086,0,0,0-4.873-.364,4.556,4.556,0,0,0-2.067,4.388S0.61,12.54.61,18.225c0.125,5.677,6.056,5.734,6.056,5.734H16V18.022H13.062L18,12.709l4.938,5.313H20v5.938h8.483s5.52,0.006,6.295-5.395c0.369-5.906-5.335-7.07-5.335-7.07s0.649-8.743-7.361-9.74C15.215,1.053,13.126,7.433,13.126,7.433Z"/>
+</svg>

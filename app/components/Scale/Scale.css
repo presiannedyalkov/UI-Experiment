@@ -1,0 +1,36 @@
+:local(.radio) > label {
+  margin: 0 0.25rem;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+}
+:local(.formgroupScale) {
+  padding: 0 1rem;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+:local(.formgroupScale):before {
+  content: 'Not likely';
+  display: inline-block;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+:local(.formgroupScale):after {
+  content: 'Very likely';
+  display: inline-block;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+:local(.formgroupContainer) {
+  height: 10rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+:local(.formgroupContainer) > legend {
+  font-size: 1rem;
+  padding: 0 1rem;
+}

@@ -1,0 +1,12 @@
+:local(.textBox) {
+  height: 10rem;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+:local(.checkMark) {
+  fill: grey;
+  width: 3rem;
+}

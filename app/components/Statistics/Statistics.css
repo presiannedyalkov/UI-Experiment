@@ -1,0 +1,35 @@
+:local(.container) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 1.5rem;
+}
+:local(.iconError):before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../../images/error.svg") no-repeat;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.75rem;
+}
+:local(.iconDone):before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../../images/done.svg") no-repeat;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.75rem;
+}
+:local(.iconUploading):before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../../images/uploading.svg") no-repeat;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.75rem;
+}

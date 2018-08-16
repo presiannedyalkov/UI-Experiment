@@ -1,0 +1,145 @@
+/* Bootstrap override */
+.btn-outline-primary:hover {
+  background-color: transparent;
+}
+
+/* custom default button styles */
+:local(.button) {
+  margin-bottom: 1rem;
+}
+
+/* Bootstrap color overrides */
+/* RED */
+.btn-red.btn-primary {
+  background-color: #ff4444;
+  border-color: #ff4444;
+}
+.btn-red.btn-primary:hover, .btn-red.btn-primary:active, .btn-red.btn-primary.active, .btn-red.btn-primary:focus, .btn-red.btn-primary:not(:disabled):not(.disabled).active, .btn-red.btn-primary:not(:disabled):not(.disabled):active {
+  background-color: #CC0000;
+  border-color: #CC0000;
+  box-shadow: none;
+}
+.btn-red.btn-outline-primary {
+  border-color: #ff4444;
+  color: #ff4444;
+}
+.btn-red.btn-outline-primary:hover, .btn-red.btn-outline-primary:active, .btn-red.btn-outline-primary.active, .btn-red.btn-outline-primary:focus, .btn-red.btn-outline-primary:not(:disabled):not(.disabled).active, .btn-red.btn-outline-primary:not(:disabled):not(.disabled):active {
+  border-color: #CC0000;
+  background-color: #FFFFFF;
+  color: #CC0000;
+  box-shadow: none;
+}
+.btn-red.btn-link {
+  color: #ff4444;
+}
+.btn-red.btn-link:hover {
+  color: #CC0000;
+}
+
+/* GREEN */
+.btn-green.btn-primary {
+  background-color: #00C851;
+  border-color: #00C851;
+}
+.btn-green.btn-primary:hover, .btn-green.btn-primary:active, .btn-green.btn-primary.active, .btn-green.btn-primary:focus, .btn-green.btn-primary:not(:disabled):not(.disabled).active, .btn-green.btn-primary:not(:disabled):not(.disabled):active {
+  background-color: #007E33;
+  border-color: #007E33;
+  box-shadow: none;
+}
+.btn-green.btn-outline-primary {
+  border-color: #00C851;
+  color: #00C851;
+}
+.btn-green.btn-outline-primary:hover, .btn-green.btn-outline-primary:active, .btn-green.btn-outline-primary.active, .btn-green.btn-outline-primary:focus, .btn-green.btn-outline-primary:not(:disabled):not(.disabled).active, .btn-green.btn-outline-primary:not(:disabled):not(.disabled):active {
+  border-color: #007E33;
+  background-color: #FFFFFF;
+  color: #007E33;
+  box-shadow: none;
+}
+.btn-green.btn-link {
+  color: #00C851;
+}
+.btn-green.btn-link:hover {
+  color: #007E33;
+}
+
+/* BLUE */
+.btn-blue.btn-primary {
+  background-color: #4285F4;
+  border-color: #4285F4;
+}
+.btn-blue.btn-primary:hover, .btn-blue.btn-primary:active, .btn-blue.btn-primary.active, .btn-blue.btn-primary:focus, .btn-blue.btn-primary:not(:disabled):not(.disabled).active, .btn-blue.btn-primary:not(:disabled):not(.disabled):active {
+  background-color: #0d47a1;
+  border-color: #0d47a1;
+  box-shadow: none;
+}
+.btn-blue.btn-outline-primary {
+  border-color: #4285F4;
+  color: #4285F4;
+}
+.btn-blue.btn-outline-primary:hover, .btn-blue.btn-outline-primary:active, .btn-blue.btn-outline-primary.active, .btn-blue.btn-outline-primary:focus, .btn-blue.btn-outline-primary:not(:disabled):not(.disabled).active, .btn-blue.btn-outline-primary:not(:disabled):not(.disabled):active {
+  border-color: #0d47a1;
+  background-color: #FFFFFF;
+  color: #0d47a1;
+  box-shadow: none;
+}
+.btn-blue.btn-link {
+  color: #4285F4;
+}
+.btn-blue.btn-link:hover {
+  color: #0d47a1;
+}
+
+/* ORANGE */
+.btn-orange.btn-primary {
+  background-color: #ffbb33;
+  border-color: #ffbb33;
+}
+.btn-orange.btn-primary:hover, .btn-orange.btn-primary:active, .btn-orange.btn-primary.active, .btn-orange.btn-primary:focus, .btn-orange.btn-primary:not(:disabled):not(.disabled).active, .btn-orange.btn-primary:not(:disabled):not(.disabled):active {
+  background-color: #FF8800;
+  border-color: #FF8800;
+  box-shadow: none;
+}
+.btn-orange.btn-outline-primary {
+  border-color: #ffbb33;
+  color: #ffbb33;
+}
+.btn-orange.btn-outline-primary:hover, .btn-orange.btn-outline-primary:active, .btn-orange.btn-outline-primary.active, .btn-orange.btn-outline-primary:focus, .btn-orange.btn-outline-primary:not(:disabled):not(.disabled).active, .btn-orange.btn-outline-primary:not(:disabled):not(.disabled):active {
+  border-color: #FF8800;
+  background-color: #FFFFFF;
+  color: #FF8800;
+  box-shadow: none;
+}
+.btn-orange.btn-link {
+  color: #ffbb33;
+}
+.btn-orange.btn-link:hover {
+  color: #FF8800;
+}
+
+/* BLACK */
+.btn-black.btn-primary {
+  background-color: #2E2E2E;
+  border-color: #2E2E2E;
+}
+.btn-black.btn-primary:hover, .btn-black.btn-primary:active, .btn-black.btn-primary.active, .btn-black.btn-primary:focus, .btn-black.btn-primary:not(:disabled):not(.disabled).active, .btn-black.btn-primary:not(:disabled):not(.disabled):active {
+  background-color: #212121;
+  border-color: #212121;
+  box-shadow: none;
+}
+.btn-black.btn-outline-primary {
+  border-color: #2E2E2E;
+  color: #2E2E2E;
+}
+.btn-black.btn-outline-primary:hover, .btn-black.btn-outline-primary:active, .btn-black.btn-outline-primary.active, .btn-black.btn-outline-primary:focus, .btn-black.btn-outline-primary:not(:disabled):not(.disabled).active, .btn-black.btn-outline-primary:not(:disabled):not(.disabled):active {
+  border-color: #212121;
+  background-color: #FFFFFF;
+  color: #212121;
+  box-shadow: none;
+}
+.btn-black.btn-link {
+  color: #2E2E2E;
+}
+.btn-black.btn-link:hover {
+  color: #212121;
+}

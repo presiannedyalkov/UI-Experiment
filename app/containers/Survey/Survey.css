@@ -1,0 +1,15 @@
+:local(.button) {
+  margin: 2rem;
+}
+:local(.form) * {
+  font-family: inherit;
+}
+:local(.form) .form-control {
+  width: 10rem;
+}
+:local(.form) .form-group .help-block {
+  color: white;
+}
+:local(.form) .form-group.has-error .help-block {
+  color: #a94442;
+}
