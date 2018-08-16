@@ -18,9 +18,10 @@ import Survey from 'containers/Survey';
 import Statistics from 'components/Statistics';
 
 class Experiment extends React.PureComponent {
+  // Serialize the array with the items data. TODO add JSDoc comments
   static serialize(array) {
     const object = array.reduce((acc, curr, i) => {
-      const accumulator = acc;
+      const accumulator = acc; // we can skip this step, but it's better not to mutate parameters, but create new const
       accumulator[i] = curr;
       return accumulator;
     }, {});
@@ -56,6 +57,7 @@ class Experiment extends React.PureComponent {
     Experiment.serialize = Experiment.serialize.bind(this);
   }
 
+  // Set a cookie when someone finishes the experiment
   componentDidUpdate(prevProps, prevState) {
     if (prevState.participated !== this.state.participated) {
       const cookies = new Cookies();
@@ -63,6 +65,7 @@ class Experiment extends React.PureComponent {
     }
   }
 
+  // We transfer the data from all the children into the experiment container
   handleChangeStep(args) {
     const { data, color, age, gender, device, frequency, send, participated } = args;
     this.setState({
